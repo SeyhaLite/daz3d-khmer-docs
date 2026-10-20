@@ -1,0 +1,321 @@
+/* ==========================================================================
+   khmer.css — Khmer typography + light/dark mode for sphinx_rtd_theme.
+   Design stays stock Read the Docs; only fonts, a few accents and the
+   dark palette are added. No layout changes.
+   ========================================================================== */
+
+:root {
+  --kh-sans: "Noto Sans Khmer", "Khmer OS Battambang", "Khmer OS System",
+             "Khmer OS", -apple-system, "Segoe UI", sans-serif;
+  --kh-serif: "Noto Serif Khmer", "Noto Sans Khmer", "Khmer OS Battambang", serif;
+}
+
+/* ---------------------------------------------------------- typography */
+body,
+.wy-nav-side,
+.wy-nav-top,
+.wy-menu-vertical,
+.wy-breadcrumbs,
+.rst-content,
+.rst-content .admonition-title,
+.btn,
+input[type="text"],
+input[type="search"],
+#search-results p,
+.wy-form input {
+  font-family: var(--kh-sans);
+}
+
+h1, h2, h3, h4, h5, h6,
+.rst-content h1, .rst-content h2, .rst-content h3,
+.rst-content h4, .rst-content h5, .rst-content h6,
+.rst-content .toc-backref,
+.wy-side-nav-search .icon-home {
+  font-family: var(--kh-serif);
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.rst-content p,
+.rst-content li,
+.rst-content td,
+.rst-content blockquote {
+  line-height: 1.85;
+}
+
+.wy-menu-vertical a { word-break: break-word; line-height: 1.55; }
+
+/* slightly wider content column for Khmer text */
+.wy-nav-content { max-width: 920px; }
+
+/* source attribution note under each page title */
+.src-note {
+  font-size: 12.5px;
+  color: #8b949e;
+  margin: -6px 0 20px;
+  font-style: italic;
+}
+.src-note a {
+  color: #8b949e;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+}
+
+/* ---------------------------------------------- sidebar header (dark) */
+.wy-side-nav-search > a.icon-home { color: #e8ecf1; font-size: 16px; }
+.wy-side-nav-search > a.icon-home:hover { color: #6ab0de; }
+.wy-side-nav-search img.logo { width: 54px; height: 54px; margin: 8px auto 2px; }
+.wy-side-nav-search input[type="text"] {
+  background: #14161a; border: 1px solid #343b45; color: #d9dde4;
+}
+.wy-side-nav-search input[type="text"]::placeholder { color: #6e7784; }
+
+/* ==========================================================================
+   Dark palette (site is dark-only)
+   ========================================================================== */
+html { color-scheme: dark; }
+
+html body { background: #14161a; color: #d9dde4; }
+
+/* content area */
+html .wy-nav-content-wrap,
+html .wy-nav-content { background: #14161a; }
+html .rst-content { color: #d9dde4; }
+html .wy-nav-content hr { border-color: #2f343d; }
+
+/* headings & links */
+html .rst-content h1,
+html .rst-content h2,
+html .rst-content h3,
+html .rst-content h4,
+html .rst-content h5,
+html .rst-content h6 { color: #eef1f6; }
+html .rst-content h2 { border-bottom-color: #2f343d; }
+html a { color: #6ab0de; }
+html a:hover { color: #99ccee; }
+html a:visited { color: #9b8fca; }
+
+/* breadcrumbs + edit link */
+html .wy-breadcrumbs { color: #9aa2ae; }
+html .wy-breadcrumbs li.wy-breadcrumbs-aside a { color: #8b949e; }
+html .wy-breadcrumbs li.wy-breadcrumbs-aside a:hover { color: #6ab0de; }
+
+/* inline code & code blocks */
+html .rst-content code,
+html .rst-content tt {
+  background: #262b33;
+  border-color: #343b45;
+  color: #dfe3ea;
+}
+html .rst-content code.literal { color: #e8a9a0; }
+html .highlight,
+html .rst-content div[class^="highlight"] {
+  background: #1c2027;
+  border-color: #2f343d;
+}
+html .highlight pre { color: #d6deeb; }
+
+/* pygments tokens on dark */
+html .highlight .hll { background-color: #2c3143; }
+html .highlight .c,
+html .highlight .c1,
+html .highlight .cm,
+html .highlight .ch { color: #7f8aa5; font-style: italic; }
+html .highlight .k,
+html .highlight .kd,
+html .highlight .kn,
+html .highlight .kr,
+html .highlight .kt { color: #c792ea; }
+html .highlight .s,
+html .highlight .s1,
+html .highlight .s2,
+html .highlight .se,
+html .highlight .sh,
+html .highlight .sb { color: #a5d68f; }
+html .highlight .m,
+html .highlight .mi,
+html .highlight .mf,
+html .highlight .mh,
+html .highlight .mo { color: #f78c6c; }
+html .highlight .n,
+html .highlight .na,
+html .highlight .nb,
+html .highlight .nc,
+html .highlight .nf,
+html .highlight .nn,
+html .highlight .nt,
+html .highlight .nv,
+html .highlight .o,
+html .highlight .p { color: #d6deeb; }
+
+/* tables */
+html .rst-content table.docutils,
+html .rst-content table.field-list { border-color: #343b45; }
+html .rst-content table.docutils th,
+html .rst-content table.docutils td,
+html .rst-content table.field-list th,
+html .rst-content table.field-list td { border-color: #343b45; }
+html .rst-content table.docutils tr:nth-child(2n-1) td,
+html .rst-content table.field-list tr:nth-child(2n-1) td {
+  background: #1c2027;
+}
+html .rst-content table.docutils th { background: #232830; color: #eef1f6; }
+html .rst-content table thead { color: #eef1f6; }
+
+/* admonitions — keep RTD title colors, darken bodies */
+html .rst-content .admonition,
+html .rst-content .note,
+html .rst-content .attention,
+html .rst-content .caution,
+html .rst-content .warning,
+html .rst-content .important,
+html .rst-content .tip,
+html .rst-content .hint,
+html .rst-content .seealso,
+html .rst-content .admonition-todo {
+  background: #1c2530;
+  color: #d9dde4;
+}
+html .rst-content .warning,
+html .rst-content .caution,
+html .rst-content .attention { background: #2c2119; }
+html .rst-content .tip,
+html .rst-content .hint { background: #162925; }
+html .rst-content .important { background: #251d33; }
+html .rst-content .admonition-title { color: #fff; }
+
+/* blockquote */
+html .rst-content blockquote { color: #b7bec9; border-left-color: #3a414d; }
+
+/* prev/next buttons */
+html .btn-neutral {
+  background: #232830 !important;
+  color: #c9cfda !important;
+  border-color: #343b45;
+}
+html .btn-neutral:hover { background: #2c323d !important; color: #eef1f6 !important; }
+
+/* footer */
+html footer,
+html footer p,
+html .rst-footer-buttons { color: #8b949e; }
+html footer hr { border-color: #2f343d; }
+
+/* sidebar — RTD sidebar is already dark; fix the light "current" states */
+html .wy-menu-vertical li.current > a,
+html .wy-menu-vertical li.current > a span.toctree-expand {
+  background: #14161a;
+  color: #d9dde4;
+  border-right-color: #14161a;
+}
+html .wy-menu-vertical li.current > a:hover { background: #1d2128; }
+html .wy-menu-vertical li.toctree-l2.current > a { background: #232830; }
+html .wy-menu-vertical li.toctree-l2.current li.toctree-l3 > a { background: #1c2027; }
+html .wy-menu-vertical li.toctree-l1.current > a { border-color: #14161a; }
+html .wy-menu-vertical li.current a { border-right-color: #14161a; }
+
+/* search */
+html #search-results .search li {
+  background: #1c2027;
+  border: 1px solid #2f343d;
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+}
+html #search-results .context,
+html p.searchinfo { color: #9aa2ae; }
+html mark,
+html .rst-content .highlighted { background: #5c5216; color: #f0e6b0; }
+html .wy-side-nav-search input[type="text"] { border-color: #1a5d8a; }
+
+/* figures / images */
+html .rst-content img { background: #fcfcfc; border-radius: 4px; }
+html .rst-content .figure .caption-text { color: #9aa2ae; }
+
+/* guilabel & kbd */
+html .rst-content .guilabel {
+  background: #1c2a38; border-color: #2f4a63; color: #a8cdee;
+}
+html kbd { background: #262b33; border-color: #3a414d; color: #dfe3ea; }
+
+/* scrollbar (webkit) */
+html ::-webkit-scrollbar { width: 10px; height: 10px; }
+html ::-webkit-scrollbar-thumb { background: #343b45; border-radius: 5px; }
+html ::-webkit-scrollbar-track { background: #14161a; }
+
+/* sidebar logo sizing — keep the header compact */
+.wy-side-nav-search img.logo { max-width: 76px; margin: 10px auto 4px; }
+.wy-side-nav-search > a.icon-home { font-size: 17px; }
+
+/* ==========================================================================
+   Unified dark sidebar — no more brown/light clashes in dark mode
+   ========================================================================== */
+html .wy-side-nav-search { background: #1f2328 !important; }
+html .wy-side-nav-search > a.icon-home { color: #e8ecf1; }
+html .wy-side-nav-search > a.icon-home:hover { color: #6ab0de; }
+html .wy-side-nav-search input[type="text"] {
+  background: #14161a; border-color: #343b45; color: #d9dde4;
+}
+html .wy-nav-side,
+html .wy-side-scroll { background: #1f2328; }
+html .wy-menu-vertical header,
+html .wy-menu-vertical p.caption { color: #6ab0de; }
+html .wy-menu-vertical a { color: #b6c1cc; }
+html .wy-menu-vertical a:hover { background: #2a2f36; color: #eef1f6; }
+html .wy-menu-vertical li.current { background: #14161a; }
+html .wy-menu-vertical li.current > a {
+  background: #14161a; color: #d9dde4; border-right-color: #14161a;
+}
+html .wy-menu-vertical li.toctree-l2.current > a { background: #1f2328; color: #d9dde4; }
+html .wy-menu-vertical li.toctree-l2.current li.toctree-l3 > a { background: #14161a; }
+html .wy-menu-vertical li.toctree-l1.current > a { border-color: #14161a; }
+
+/* ==========================================================================
+   Contrast fixes (dark-only): table striping + current-page menu links
+   ========================================================================== */
+html .rst-content table.docutils tr:nth-child(2n-1) td,
+html .rst-content table.docutils tbody tr:nth-child(2n-1) td,
+html .rst-content table.field-list tr:nth-child(2n-1) td {
+  background: #1c2027 !important;
+}
+html .rst-content table.docutils tr:nth-child(2n) td,
+html .rst-content table.docutils tbody tr:nth-child(2n) td {
+  background: #171a1e !important;
+}
+html .rst-content table.docutils td,
+html .rst-content table.field-list td {
+  color: #d9dde4 !important;
+}
+html .rst-content table.docutils th,
+html .rst-content table.field-list th {
+  background: #232830 !important;
+  color: #eef1f6 !important;
+}
+html .rst-content table.docutils,
+html .rst-content table.docutils td,
+html .rst-content table.docutils th {
+  border-color: #343b45 !important;
+}
+/* sub-items under the current page: readable grey, bright on hover */
+html .wy-menu-vertical li.current a,
+html .wy-menu-vertical li.current li.current a,
+html .wy-menu-vertical li.toctree-l2.current li.toctree-l3 a {
+  color: #b6c1cc;
+}
+html .wy-menu-vertical li.current > a { color: #d9dde4; }
+html .wy-menu-vertical li.toctree-l2.current > a { color: #eef1f6; }
+html .wy-menu-vertical li.current a:hover {
+  color: #eef1f6; background: #2a2f36;
+}
+
+/* kbd chips (e.g. Alt, Ctrl+R): RTD ships a white background with inherited
+   color via a high-specificity :not() chain — override it for dark mode */
+html .rst-content kbd,
+html .rst-content .kbd,
+html kbd {
+  background-color: #262b33 !important;
+  color: #dfe3ea !important;
+  border: 1px solid #3a414d !important;
+  box-shadow: 0 2px #101215 !important;
+  border-radius: 4px;
+}

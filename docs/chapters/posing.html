@@ -1,0 +1,280 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="km" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta content="ជំពូក ៥៖ Posing — ផ្ទាំង Posing, Universal/Pose Tool, កាយវិការមុខ (Expressions) និង Pose Presets។ Chapter 5: posing figures, pose tools, expressions and presets." name="description" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ជំពូក ៥ — Posing (កែកាយវិការ) &mdash; Daz Studio 4.x ឯកសារខ្មែរ</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/khmer.css?v=ca5001cf" />
+
+  
+    <link rel="shortcut icon" href="../_static/daz-logo.png"/>
+    <link rel="canonical" href="https://seyhalite.github.io/daz3d-khmer-docs/chapters/posing.html" />
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=c23564c2"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ជំពូក ៦ — កាមេរ៉ា និងទិដ្ឋភាព" href="cameras.html" />
+    <link rel="prev" title="ជំពូក ៤ — Shaping (កែរូបរាង)" href="shaping.html" />
+ 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@300;400;500;600;700&amp;family=Noto+Serif+Khmer:wght@500;600;700&amp;display=swap" rel="stylesheet"><link rel="apple-touch-icon" href="../_static/daz-logo.png">
+<link rel="canonical" href="https://seyhalite.github.io/daz3d-khmer-docs/chapters/posing.html">
+<meta name="keywords" content="Daz Studio, Daz Studio 4, Daz Studio Khmer, DAZ 3D documentation, Khmer 3D tutorial, ឯកសារ Daz Studio, បកប្រែជាភាសាខ្មែរ, មគ្គុទ្ទេសក៍ខ្មែរ, 3D rendering, Genesis figure, morph, posing, lighting, depth of field, ភាសាខ្មែរ">
+<meta property="og:site_name" content="Daz Studio 4.x — ឯកសារជាភាសាខ្មែរ">
+<meta property="og:title" content="ជំពូក ៥ — Posing (កែកាយវិការ)">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="km_KH">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:image" content="https://seyhalite.github.io/daz3d-khmer-docs/_static/daz-logo.png">
+<meta property="og:url" content="https://seyhalite.github.io/daz3d-khmer-docs/chapters/posing.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ជំពូក ៥ — Posing (កែកាយវិការ)">
+<meta name="twitter:image" content="https://seyhalite.github.io/daz3d-khmer-docs/_static/daz-logo.png">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "WebSite", "name": "Daz Studio 4.x — ឯកសារជាភាសាខ្មែរ", "alternateName": "Daz Studio 4.x Khmer Documentation", "url": "https://seyhalite.github.io/daz3d-khmer-docs/", "inLanguage": ["km", "en"], "description": "Khmer translation of the official Daz Studio 4.x documentation with official screenshots. ការបកប្រែជាភាសាខ្មែរនៃឯកសារផ្លូវការ Daz Studio 4.x។", "potentialAction": {"@type": "SearchAction", "target": "https://seyhalite.github.io/daz3d-khmer-docs/search.html?q={search_term_string}", "query-input": "required name=search_term_string"}}
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #1f2328" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Daz Studio 4.x
+              <img src="../_static/daz-logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">ការចាប់ផ្តើម</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">ចាប់ផ្តើមប្រើ Daz Studio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../userguide.html">មគ្គុទ្ទេសក៍អ្នកប្រើប្រាស់ (សង្ខេប)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">មគ្គុទ្ទេសក៍ចាប់ផ្តើមរហ័ស — Barefoot Dancer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ជំពូកមគ្គុទ្ទេសក៍អ្នកប្រើប្រាស់</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="navigating.html">ជំពូក ១ — ស្វែងយល់ពីចំណុចប្រទាក់</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scene.html">ជំពូក ២ — សាងសង់ឆាក</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textures.html">ជំពូក ៣ — វាយនភាព ផ្ទៃ និងសម្ភារៈ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shaping.html">ជំពូក ៤ — Shaping (កែរូបរាង)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">ជំពូក ៥ — Posing (កែកាយវិការ)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">ការជ្រើសសម្រាប់ Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">ផ្ទាំង Posing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#posing-viewport">Posing ផ្ទាល់ក្នុង Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#expressions">កាយវិការមុខ (Expressions)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pose-preset">រក្សាទុក Pose Preset ផ្ទាល់ខ្លួន</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">គន្លឹះចុងក្រោយ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cameras.html">ជំពូក ៦ — កាមេរ៉ា និងទិដ្ឋភាព</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lights.html">ជំពូក ៧ — ពន្លឺ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rendering.html">ជំពូក ៨ — Rendering (ចេញជារូបភាព និងវីដេអូ)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">មេរៀនបន្ថែម</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide/layouts.html">មេរៀន៖ ការប្ដូរ Layout និង Interface Style</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ឯកសារយោង</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../reference/overview.html">មគ្គុទ្ទេសក៍យោង (សង្ខេប)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/interface.html">ចំណុចប្រទាក់អ្នកប្រើប្រាស់ (UI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/glossary.html">វចនានុក្រមពាក្យបច្ចេកទេស</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #1f2328" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Daz Studio 4.x</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">ជំពូក ៥ — Posing (កែកាយវិការ)</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/SeyhaLite/daz3d-khmer-docs/edit/main/source/chapters/posing.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="posing">
+<h1>ជំពូក ៥ — Posing (កែកាយវិការ)<a class="headerlink" href="#posing" title="Link to this heading"></a></h1>
+<p class="src-note">បកប្រែពី៖ <a href="https://docs.daz3d.com/public/software/dazstudio/4/userguide/chapters/posing/start" target="_blank" rel="noopener">V — Posing</a> · <i>Giving Life to Your Scene</i></p><p>Render មិនគួរឱ្យចាប់អារម្មណ៍ទេ បើតួនៅក្នុង «T-pose» លំនាំដើម។ Posing ជួយឱ្យ render <strong>ប្រាប់រឿង</strong> — បង្កើត «leading lines» សម្រាប់សមាសភាព លាយតួជាមួយឆាក ឬធ្វើឱ្យវាលេចធ្លោ។ Posing គួរជាជំហានសំខាន់បំផុតមួយក្នុងលំហូរការងារ — បើ pose មិនធម្មជាតិ render នឹងមើលទៅ «សំប៉ែត» មិនថា realistic ឬ stylized ទេ។</p>
+<p>ដោយសារ posing សំខាន់ខ្លាំង Daz Studio មាន Activity ទាំងមូលសម្រាប់វា — <strong>'Pose &amp; Animate'</strong> នៃ layout Hollywood Blvd។</p>
+<section id="id1">
+<h2>ការជ្រើសសម្រាប់ Posing<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<p>ដូចក្នុង Shaping — ការជ្រើសឆាកបច្ចុប្បន្នកំណត់លក្ខណៈសម្បត្តិដែលបង្ហាញក្នុងផ្ទាំង Posing។ លក្ខណៈសម្បត្តិត្រូវបានរៀបចំជាក្រុមតាមមុខងារ ហើយតួដែលមាន nodes ច្រើនអាចមាន groups/លក្ខណៈសម្បត្តិផ្សេងគ្នាសម្រាប់ node នីមួយៗ។</p>
+<p>អ្វីដែលត្រូវធ្វើគឺ <strong>ជ្រើស node ដែលចង់ pose</strong>៖ ចង់កែដៃ → ជ្រើសដៃ · ចង់កែភ្លៅ → ជ្រើសភ្លៅ។</p>
+<ul class="simple">
+<li><p>ជ្រើសតាមផ្ទាំង <strong>Scene</strong> ឬផ្ទាល់ក្នុង <strong>Viewport</strong></p></li>
+<li><p><strong>Universal Tool</strong> — បើកពី toolbar រួចចុច node ក្នុង Viewport (ដាក់ទ្រនិចលើតួ → ផ្នែករាងកាយលេចពណ៌ → ចុចឆ្វេងដើម្បីជ្រើស)</p></li>
+<li><p><strong>ចុចស្ដាំ</strong> ក្នុង Viewport → ម៉ឺនុយបង្ហាញបញ្ជី nodes ដែលជ្រើសបានពីចំណុចនោះ — មានប្រយោជន៍សម្រាប់ជ្រើសសម្លៀកបំពាក់ សក់ ឬ followers ផ្សេងៗដែល conformed នឹងតួ</p></li>
+</ul>
+</section>
+<section id="id2">
+<h2>ផ្ទាំង Posing<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<p>ស្ថិតនៅខាងឆ្វេង (ក្នុង Activity 'Pose &amp; Animate') — មាន ២ pages ដូច Surfaces/Shaping៖ <strong>Editor</strong> និង <strong>Presets</strong> (ប្ដូរដោយចុចស្លាកខាងលើ)។</p>
+<section id="page-editor">
+<h3>Page Editor<a class="headerlink" href="#page-editor" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Group View</strong> (ឆ្វេង) — property groups ទាំងអស់សម្រាប់ការជ្រើសបច្ចុប្បន្ន (ដូច Parameters ប៉ុន្តែបង្ហាញតែ groups ដែលមានលក្ខណៈសម្បត្តិ posing)។ ចុចដើម្បីជ្រើស · ចុចព្រួញដើម្បីពង្រីក/បង្រួម</p></li>
+<li><p><strong>Property View</strong> (ស្ដាំ) — លក្ខណៈសម្បត្តិ posing នីមួយៗនៃ group ដែលជ្រើស។ អូស slider ឆ្វេង/ស្ដាំ ឬចុចលើលេខ រួចវាយតម្លៃផ្ទាល់ខ្លួន</p></li>
+<li><p><strong>Scene Selection Menu</strong> (ម៉ឺនុយធ្លាក់ចុះខាងលើឆ្វេង) — កំណែតូចនៃផ្ទាំង Scene សម្រាប់ប្ដូរការជ្រើសរហ័ស</p></li>
+<li><p><strong>Filters</strong> — «All» = លក្ខណៈសម្បត្តិ posing ទាំងអស់ · «Currently Used» = តែអ្វីដែលអ្នកបានកែ (វិធីងាយមើលថាអ្វីកំពុងប៉ះពាល់ការជ្រើស)</p></li>
+<li><p>មាន <strong>ការស្វែងរកអត្ថបទ</strong> នៅផ្នែកខាងលើផ្ទាំង</p></li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>រកលក្ខណៈសម្បត្តិមិនឃើញ? សាក (១) ប្ដូរ node ដែលជ្រើស (២) ប្ដូរ property group (៣) ប្រើ filter «All»។</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Posing ជំនាញបានដោយ <strong>អនុវត្ត</strong> — ចំណាយពីរនាទីលេងក្នុង Editor page៖ ប្ដូរការជ្រើស ប្ដូរ group អូស slider នីមួយៗដើម្បីឃើញឥទ្ធិពល។ វីដេអូជំនួយ៖ <a class="reference external" href="https://docs.daz3d.com/public/software/dazstudio/4/userguide/posing/videos/posing/start">Posing Pane Overview</a>។</p>
+</div>
+</section>
+<section id="page-presets">
+<h3>Page Presets<a class="headerlink" href="#page-presets" title="Link to this heading"></a></h3>
+<p>កន្លែងផ្ទុក <strong>Pose Presets</strong> — preset អនុវត្តកាយវិការកំណត់ជាមុនទៅលើតួ ជួយសន្សំពេលវេលា (ជំនួសការ pose node នីមួយៗដោយដៃ)។ សម្រាប់អ្នកសិល្បៈភាគច្រើន Pose Preset ជា <strong>ចំណុចចាប់ផ្តើម</strong> — ផ្ទុក preset រួចកែបន្តិចបន្តួចក្នុង Editor page។</p>
+<ul class="simple">
+<li><p>រៀបចំដូច Smart Content៖ categories នៅខាងឆ្វេង (ចុចព្រួញដើម្បីពង្រីក subcategories) · poses នៅខាងស្ដាំ</p></li>
+<li><p>ផ្ទុកដោយ <strong>ចុចពីរដង</strong> លើរូបភាពតំណាង ឬ <strong>អូសទម្លាក់</strong> លើតួ</p></li>
+<li><p><strong>ចុចស្ដាំ</strong> លើរូបភាពតំណាង → ជម្រើសបន្ថែម រួមទាំង <strong>merge</strong> pose ចូលឆាក</p></li>
+<li><p>Pose Presets ភាគច្រើនរៀបចំតាម function និង region — Daz Studio ភ្ជាប់ presets មួយចំនួនសម្រាប់ Genesis និង Genesis 2 Female (មើលក្រោម category <strong>Poses</strong>)។ Presets បន្ថែមអាចទិញពី <a class="reference external" href="https://www.daz3d.com/animations-poses">DAZ 3D Store</a></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Pose Presets ខ្លះមាន rotation ក្រៅដែនកំណត់ធម្មតារបស់តួ — ពេលផ្ទុក អ្នកនឹងត្រូវបានសួរឱ្យ <strong>បិទ limits</strong>។ គួរយល់ព្រម បើចង់ឱ្យ pose ត្រូវនឹងឯកសារ។ ហើយដូច Smart Content — បង្ហាញតែ presets ដែលស្របនឹងការជ្រើសបច្ចុប្បន្ន ដូច្នេះជ្រើសតួជាមុន។</p>
+</div>
+</section>
+</section>
+<section id="posing-viewport">
+<h2>Posing ផ្ទាល់ក្នុង Viewport<a class="headerlink" href="#posing-viewport" title="Link to this heading"></a></h2>
+<p>អ្នកខ្លះចូលចិត្ត pose ផ្ទាល់ក្នុង Viewport ជាង។ ជាទូទៅគេប្រើ <strong>ផ្សំគ្នា</strong>៖ ចលនាធំៗក្នុង Viewport រួចកែលម្អិតតូចៗក្នុង Editor page របស់ផ្ទាំង Posing។ ឧបករណ៍សំខាន់ពីរ៖</p>
+<section id="universal-tool">
+<h3>Universal Tool<a class="headerlink" href="#universal-tool" title="Link to this heading"></a></h3>
+<p>ឧបករណ៍ដែលអ្នកស្គាល់ពីជំពូកមុន (translate/rotate/scale) — ក៏ប្រើ pose <strong>nodes</strong> របស់តួបានដែរ៖</p>
+<ol class="arabic simple">
+<li><p>បើកឧបករណ៍ពី toolbar (រូបភាពតំណាងនឹងលេចពណ៌ពេលសកម្ម)</p></li>
+<li><p>ជ្រើសតួ (ដាក់ទ្រនិចលើតួ → លេចពណ៌ → ចុច) រួចជ្រើស node (ផ្នែករាងកាយលេចពណ៌ពេលដាក់ទ្រនិចលើ)</p></li>
+<li><p>ប្រើ gizmos — <strong>rotation ងាយស្រួលបំផុត</strong> ព្រោះវាប៉ះពាល់តែ node ដែលជ្រើស ខណៈ translation អាចប៉ះពាល់ nodes ខាងលើក្នុង chain។ ចុចឆ្វេង + អូសធ្នូ ក្រហម (X) / បៃតង (Y) / ខៀវ (Z) ដើម្បីបង្វិល</p></li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Universal Tool មានតម្លៃខ្លាំងពេល pose <strong>ដៃ និងម្រាមដៃ</strong>។</p>
+</div>
+</section>
+<section id="pose-tool">
+<h3>Pose Tool<a class="headerlink" href="#pose-tool" title="Link to this heading"></a></h3>
+<p>ឧបករណ៍ pose ជំនាញក្នុង Viewport ជាមួយមុខងារគួរឱ្យចាប់អារម្មណ៍៖</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ក្នុង layout Hollywood Blvd — Pose Tool <strong>លាក់ជាលំនាំដើម</strong>។ បើកវាតាមរយៈ <strong>Viewport Options Menu</strong> → <strong>'Show Pose Tool.'</strong> ហើយវាលេចតែពេលអ្នកជ្រើស <strong>ឆ្អឹង (bone)</strong> — បើជ្រើស root node វាមិនលេចទេ។</p>
+</div>
+<ul class="simple">
+<li><p><strong>Free Rotate Control</strong> — បាល់នៅកណ្ដាលឧបករណ៍៖ ចុច + អូសដើម្បីបង្វិលឆ្អឹង <strong>គ្រប់អ័ក្សទាំង ៣ ព្រមគ្នា</strong>។ «Angle Indicators» នីមួយៗផ្លាស់ទីក្នុងដែនរបស់វា បង្ហាញពីឥទ្ធិពលលើអ័ក្សនីមួយៗ</p></li>
+<li><p><strong>Pose Controls</strong> — កងពណ៌រង្វេលកណ្ដាល (concentric rings) សម្រាប់អ័ក្សនីមួយៗ៖ 🔴 X · 🟢 Y · 🔵 Z។ ចុចលើកង រួចអូសដើម្បី pose តាមអ័ក្សនោះ។ បន្ទាត់ខ្មៅ = ទីតាំងបច្ចុប្បន្ន។ កងមានពីរពណ៌៖ ពណ៌ច្បាស់ = ដែន pose បាន · ពណ៌ស្រអាប់ = ក្រៅដែនកំណត់ rotation</p></li>
+<li><p><strong>Restore Options Menu</strong> (រូបភាពតំណាងខាងលើឆ្វេង) — ស្ដារ pose នៃឆ្អឹងបច្ចុប្បន្ន ឬតួទាំងមូល (សម្រាប់ពេលខូច ចង់ចាប់ផ្តើមឡើងវិញ) + បើក/បិទ rotation limits</p></li>
+<li><p><strong>Pinning Options Menu</strong> (រូបភាពតំណាងខាងលើស្ដាំ) — pin (ខ្ទាស់) ឆ្អឹងឱ្យនៅនឹងថ្កល់ ឬ unpin។ ចំណាំ៖ ជា <strong>soft pins</strong> — ឆ្អឹងដែល pin ព្យាយាមនៅនឹងថ្កល់ ប៉ុន្តែបើចលនាឆ្អឹងផ្សេងទាញវា វានឹងផ្លាស់ទី ហើយបន្ទាត់ដាច់ៗនឹងលេចពី pin ទៅឆ្អឹង។ សាកល្បង៖ pin ជើងរបស់ Genesis 2 Female រួចអូសដៃ — ដល់ចំណុចមួយជើងនឹងដើរតាម។ ការ pose ដោយ pins ត្រូវការការអនុវត្ត — <strong>មិនណែនាំសម្រាប់អ្នកថ្មី</strong>។</p></li>
+</ul>
+</section>
+</section>
+<section id="expressions">
+<h2>កាយវិការមុខ (Expressions)<a class="headerlink" href="#expressions" title="Link to this heading"></a></h2>
+<p>Pose ល្អបំផុតក៏មិនពេញលេញដែរ បើគ្មាន expression សមស្រប — expressions ជាផ្នែកមិនអាចខ្វះនៃ posing។</p>
+<ol class="arabic simple">
+<li><p><strong>ជ្រើសក្បាល (Head)</strong> របស់តួ — ក្នុងផ្ទាំង Scene ឬ Scene Selection Menu នៃផ្ទាំង Posing។ ⚠️ សំខាន់ណាស់៖ បើជ្រើស node ផ្សេង expression controls មិនលេចទេ!</p></li>
+<li><p>ក្នុងផ្ទាំង Posing → group <strong>'Pose Controls'</strong> → ពង្រីកឃើញ <strong>'Head'</strong> និង <strong>'Neck'</strong></p></li>
+<li><p>ក្រោម 'Head' មាន groups សម្រាប់ <strong>'Brow'</strong> (ចិញ្ចើម), <strong>'Cheeks'</strong> (ថ្ពាល់), <strong>'Eyes'</strong> (ភ្នែក) ជាដើម — រួមទាំង group <strong>'Expressions'</strong> ដែលមាន expression ពេញលេញរួចរាល់</p></li>
+<li><p>អូស sliders — ប្រើលក្ខណៈសម្បត្តិតែមួយ ឬផ្សំគ្នា ដើម្បីបង្កើត expression ដ៏ល្អឥតខ្ចោះ</p></li>
+</ol>
+<p>Genesis និង Genesis 2 Female ភ្ជាប់មកជាមួយ expressions និង pose controls សម្រាប់មុខមួយចំនួន — បន្ថែមអាចទិញពី DAZ 3D Store។ Expression ក៏អាចផ្ទុកជា Pose Preset ពី Presets page បានដែរ។</p>
+</section>
+<section id="pose-preset">
+<h2>រក្សាទុក Pose Preset ផ្ទាល់ខ្លួន<a class="headerlink" href="#pose-preset" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>File &gt; Save As &gt; Pose Preset…</strong> (ឬចុច Pose Preset action ក្នុង toolbar) → ផ្ទាំងសន្ទនា «Filtered Save» — ដាក់ឈ្មោះ ជ្រើសទីតាំង ចុច <strong>Save</strong></p></li>
+<li><p>ផ្ទាំងសន្ទនា <strong>«Pose Preset Save Options»</strong>៖</p>
+<ul class="simple">
+<li><p><strong>«Animation Range»</strong> — ជ្រើស animation sequence ឬ pose តែមួយ frame។ បើមិនបានបង្កើត animation ជ្រើស <strong>'Current Frame Only'</strong></p></li>
+<li><p><strong>«Properties List»</strong> — ជ្រើសលក្ខណៈសម្បត្តិដែលរួមក្នុង preset (ពង្រីក skeleton និង property groups ដោយចុចព្រួញ · ដកធីកដើម្បីដកចេញ)</p></li>
+<li><p><strong>«File Options»</strong> — compress ឯកសារ (ណែនាំ — សន្សំកន្លែងថាស។ ឯកសារ compressed ត្រូវ «unzip» មុនកែក្នុង text editor — អាច unzip តាមរយៈផ្ទាំង Batch Convert)</p></li>
+</ul>
+</li>
+<li><p>ចុច <strong>Accept</strong> — preset លេចក្រោម category <strong>'Uncategorized'</strong> នៃ Presets page</p></li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>ដកធីក property group <strong>'General'</strong> ក្រោម root node របស់តួ — បើមិនដូច្នោះ Pose Preset នឹងផ្លាស់ទីតួទាំងមូលពេលអនុវត្ត (ជាធម្មតាអ្នកមិនចង់បានទេ!)។</p>
+</div>
+</section>
+<section id="id3">
+<h2>គន្លឹះចុងក្រោយ<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Pose ជាច្រើន <strong>អាស្រ័យលើរូបរាងតួ</strong> — លំដាប់ល្អបំផុត៖ <strong>Shape មុន រួច Pose</strong>។ បើធ្វើច្រាស អាចមាន collisions ឬអ្វីៗមិនត្រូវគ្នាក្រោយពេល shape</p></li>
+<li><p>Pose Preset នីមួយៗត្រូវបានរចនាសម្រាប់តួ/រូបរាងជាក់លាក់ (ជាធម្មតាបញ្ជាក់ក្នុងឈ្មោះ) — អាចប្រើលើតួផ្សេងបាន ប៉ុន្តែត្រូវការការកែបន្តិចបន្តួចក្នុង Editor page</p></li>
+<li><p>ភាពជំនាញត្រូវការពេលវេលា — កុំប្រញាប់ អនុវត្តដោយអត់ធ្មត់</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="shaping.html" class="btn btn-neutral float-left" title="ជំពូក ៤ — Shaping (កែរូបរាង)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="cameras.html" class="btn btn-neutral float-right" title="ជំពូក ៦ — កាមេរ៉ា និងទិដ្ឋភាព" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright មាតិកាដើម © DAZ 3D, LP (CC BY 3.0) · ការបកប្រែខ្មែរ © សហគមន៍ (CC BY 4.0).
+      <span class="lastupdated">Last updated on 20 តុលា 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

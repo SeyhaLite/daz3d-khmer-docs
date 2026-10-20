@@ -1,0 +1,465 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="km" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta content="ជំពូក ២៖ សាងសង់ឆាក — ផ្ទុកតួ សម្លៀកបំពាក់ props បរិស្ថាន, Scene pane, Viewport controls និង Transforms។ Chapter 2: building a scene, scene pane, viewport controls, translate/rotate/scale." name="description" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ជំពូក ២ — សាងសង់ឆាក &mdash; Daz Studio 4.x ឯកសារខ្មែរ</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/khmer.css?v=ca5001cf" />
+
+  
+    <link rel="shortcut icon" href="../_static/daz-logo.png"/>
+    <link rel="canonical" href="https://seyhalite.github.io/daz3d-khmer-docs/chapters/scene.html" />
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=c23564c2"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ជំពូក ៣ — វាយនភាព ផ្ទៃ និងសម្ភារៈ" href="textures.html" />
+    <link rel="prev" title="ជំពូក ១ — ស្វែងយល់ពីចំណុចប្រទាក់" href="navigating.html" />
+ 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@300;400;500;600;700&amp;family=Noto+Serif+Khmer:wght@500;600;700&amp;display=swap" rel="stylesheet"><link rel="apple-touch-icon" href="../_static/daz-logo.png">
+<link rel="canonical" href="https://seyhalite.github.io/daz3d-khmer-docs/chapters/scene.html">
+<meta name="keywords" content="Daz Studio, Daz Studio 4, Daz Studio Khmer, DAZ 3D documentation, Khmer 3D tutorial, ឯកសារ Daz Studio, បកប្រែជាភាសាខ្មែរ, មគ្គុទ្ទេសក៍ខ្មែរ, 3D rendering, Genesis figure, morph, posing, lighting, depth of field, ភាសាខ្មែរ">
+<meta property="og:site_name" content="Daz Studio 4.x — ឯកសារជាភាសាខ្មែរ">
+<meta property="og:title" content="ជំពូក ២ — សាងសង់ឆាក">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="km_KH">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:image" content="https://seyhalite.github.io/daz3d-khmer-docs/_static/daz-logo.png">
+<meta property="og:url" content="https://seyhalite.github.io/daz3d-khmer-docs/chapters/scene.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ជំពូក ២ — សាងសង់ឆាក">
+<meta name="twitter:image" content="https://seyhalite.github.io/daz3d-khmer-docs/_static/daz-logo.png">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "WebSite", "name": "Daz Studio 4.x — ឯកសារជាភាសាខ្មែរ", "alternateName": "Daz Studio 4.x Khmer Documentation", "url": "https://seyhalite.github.io/daz3d-khmer-docs/", "inLanguage": ["km", "en"], "description": "Khmer translation of the official Daz Studio 4.x documentation with official screenshots. ការបកប្រែជាភាសាខ្មែរនៃឯកសារផ្លូវការ Daz Studio 4.x។", "potentialAction": {"@type": "SearchAction", "target": "https://seyhalite.github.io/daz3d-khmer-docs/search.html?q={search_term_string}", "query-input": "required name=search_term_string"}}
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #1f2328" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Daz Studio 4.x
+              <img src="../_static/daz-logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">ការចាប់ផ្តើម</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">ចាប់ផ្តើមប្រើ Daz Studio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../userguide.html">មគ្គុទ្ទេសក៍អ្នកប្រើប្រាស់ (សង្ខេប)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">មគ្គុទ្ទេសក៍ចាប់ផ្តើមរហ័ស — Barefoot Dancer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ជំពូកមគ្គុទ្ទេសក៍អ្នកប្រើប្រាស់</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="navigating.html">ជំពូក ១ — ស្វែងយល់ពីចំណុចប្រទាក់</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">ជំពូក ២ — សាងសង់ឆាក</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">លំដាប់លំហូរការងារដែលមានប្រសិទ្ធភាព</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#actor">ការផ្ទុកតួ (Actor)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">សម្លៀកបំពាក់ និងសក់</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#props">Props (វត្ថុតុបតែង)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#environment">បរិស្ថាន (Environment)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#content-type-indicators">សញ្ញាបង្ហាញប្រភេទមាតិកា (Content Type Indicators)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#scene">ផ្ទាំង Scene — លម្អិតបន្ថែម</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#viewport">ការគ្រប់គ្រងទិដ្ឋភាពក្នុង Viewport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#parameters">កែប្រែមាតិកាដោយផ្ទាំង Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">រក្សាទុក និងបើកឆាកឡើងវិញ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="textures.html">ជំពូក ៣ — វាយនភាព ផ្ទៃ និងសម្ភារៈ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shaping.html">ជំពូក ៤ — Shaping (កែរូបរាង)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="posing.html">ជំពូក ៥ — Posing (កែកាយវិការ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cameras.html">ជំពូក ៦ — កាមេរ៉ា និងទិដ្ឋភាព</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lights.html">ជំពូក ៧ — ពន្លឺ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rendering.html">ជំពូក ៨ — Rendering (ចេញជារូបភាព និងវីដេអូ)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">មេរៀនបន្ថែម</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide/layouts.html">មេរៀន៖ ការប្ដូរ Layout និង Interface Style</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ឯកសារយោង</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../reference/overview.html">មគ្គុទ្ទេសក៍យោង (សង្ខេប)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/interface.html">ចំណុចប្រទាក់អ្នកប្រើប្រាស់ (UI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/glossary.html">វចនានុក្រមពាក្យបច្ចេកទេស</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #1f2328" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Daz Studio 4.x</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">ជំពូក ២ — សាងសង់ឆាក</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/SeyhaLite/daz3d-khmer-docs/edit/main/source/chapters/scene.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>ជំពូក ២ — សាងសង់ឆាក<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
+<p class="src-note">បកប្រែពី៖ <a href="https://docs.daz3d.com/public/software/dazstudio/4/userguide/chapters/building_a_scene/start" target="_blank" rel="noopener">II — Building a Scene</a> · <i>Loading and Modifying Content in DAZ Studio</i></p><p>គោលការណ៍នៃការសាងសង់ឆាកក្នុង Daz Studio ស្រដៀងនឹងការរៀបចំឆាកថតរូប ឬថតភាពយន្តពិតៗ — អ្នកត្រូវការផ្ទៃខាងក្រោយ ឬ «Set», «Actor», «Wardrobe» (សម្លៀកបំពាក់), «Props», «Lights» និង «Cameras»។ ជំពូកនេះផ្ដោតលើ តួ សម្លៀកបំពាក់ props និង set — ចប់ជំពូកនេះ អ្នកនឹងអាចផ្ទុក និងរៀបចំធាតុទាំងនេះដើម្បីបង្កើតឆាកសាមញ្ញមួយបាន។</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ជំពូកនេះប្រើ Activity <strong>'Actors, Wardrobe &amp; Props'</strong> នៃ layout Hollywood Blvd។ ទីកន្លែងផ្ទុកមាតិកាសំខាន់មានពីរ — Smart Content និង Content Library (មើល <a class="reference internal" href="navigating.html"><span class="doc">ជំពូក ១</span></a>) — ប៉ុន្តែទីនេះផ្ដោតលើ Smart Content ព្រោះវាងាយស្រួលបំផុត។</p>
+</div>
+<section id="id2">
+<h2>លំដាប់លំហូរការងារដែលមានប្រសិទ្ធភាព<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<p>ការផ្ទុកមាតិកាអាចធ្វើតាមលំដាប់ណាក៏បាន ប៉ុន្តែលំដាប់ខាងក្រោមមានប្រសិទ្ធភាពជាង៖ <strong>តួ → សម្លៀកបំពាក់/សក់ → props → បរិស្ថាន</strong>។ វិធីនេះអនុញ្ញាតឱ្យកែតួ សម្លៀកបំពាក់ និង props ដោយគ្មានការរំខានពីផ្ទៃខាងក្រោយដ៏ធំ។</p>
+</section>
+<section id="actor">
+<h2>ការផ្ទុកតួ (Actor)<a class="headerlink" href="#actor" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>បើកផ្ទាំង <strong>Smart Content</strong> (ខាងឆ្វេង) ហើយប្រាកដថាកំពុងរុករក page <strong>Files</strong> (មិនមែន Products)</p></li>
+<li><p>ជ្រើស category <strong>Figures</strong> — ពង្រីកវាដើម្បីឃើញ subcategories សម្រាប់ច្រោះបន្ថែម</p></li>
+<li><p>ចុចពីរដងលើរូបភាពតំណាងដើម្បីផ្ទុកតួ ឬអូសទម្លាក់ចូល Viewport</p></li>
+</ol>
+<p>Daz Studio ភ្ជាប់មកជាមួយតួមួយចំនួនដោយឥតគិតថ្លៃ ហើយអាចទិញបន្ថែមពី DAZ 3D Store។ អ្នកអាចផ្ទុកតួដូចគ្នាច្រើន instance ឬតួផ្សេងៗគ្នាច្រើនក្នុងឆាកតែមួយ។ សម្រាប់ការអនុវត្តតាមមគ្គុទ្ទេសក៍នេះ គេណែនាំឱ្យចាប់ផ្តើមជាមួយ <strong>Genesis 2 Base Female</strong>។</p>
+<figure class="align-default" id="id5">
+<a class="reference internal image-reference" href="../_images/ui_smart_content.jpg"><img alt="ផ្ទាំង Smart Content" src="../_images/ui_smart_content.jpg" style="width: 620px;" />
+</a>
+<figcaption>
+<p><span class="caption-text">ផ្ទាំង <strong>Smart Content</strong> — កន្លែងផ្ទុកមាតិកាតាមបរិបទ — រូបភាពពីឯកសារផ្លូវការ DAZ 3D</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id6">
+<a class="reference internal image-reference" href="../_images/ui_content_library.jpg"><img alt="ផ្ទាំង Content Library" src="../_images/ui_content_library.jpg" style="width: 620px;" />
+</a>
+<figcaption>
+<p><span class="caption-text">ផ្ទាំង <strong>Content Library</strong> — កន្លែងផ្ទុកមាតិកាទី ២ (រុករកគ្រប់អ្វីដែលបានដំឡើង) — រូបភាពពីឯកសារផ្លូវការ DAZ 3D</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="id3">
+<h2>សម្លៀកបំពាក់ និងសក់<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<p>ពេលផ្ទុកតួចូលឆាកទទេ វាត្រូវបានជ្រើសដោយស្វ័យប្រវត្តិ — ប៉ុន្តែជាទម្លាប់ល្អ គួរផ្ទៀងផ្ទាត់ការជ្រើសជានិច្ច៖ បើកផ្ទាំង <strong>Scene</strong> ហើយប្រាកដថាឈ្មោះតួលេចពណ៌ (highlighted) និងមាន bounding box ជុំវិញតួក្នុង Viewport។</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>ពេលផ្ទុកសម្លៀកបំពាក់ ឬសក់ <strong>ត្រូវជ្រើសតួជាមុនសិន</strong> — Smart Content ច្រោះមាតិកាតាមការជ្រើសបច្ចុប្បន្ន។</p>
+</div>
+<ul class="simple">
+<li><p><strong>សម្លៀកបំពាក់៖</strong> ជ្រើស category <strong>Wardrobe</strong> (មានតែសម្លៀកបំពាក់ដែលស្របនឹងតួដែលជ្រើសប៉ុណ្ណោះដែលលេចឡើង) រួចផ្ទុក top និង bottom ដោយចុចពីរដង ឬអូសទម្លាក់លើតួ</p></li>
+<li><p><strong>សក់៖</strong> ជ្រើស category <strong>Hair</strong> រួចចុចពីរដង ឬអូសទម្លាក់លើក្បាលតួ</p></li>
+</ul>
+<p>សម្លៀកបំពាក់ និងសក់ភាគច្រើននឹង «fit» ទៅតួដោយស្វ័យប្រវត្តិ — បើមិនដូច្នោះ សូមមើលផ្នែក <em>Fit To</em> ខាងក្រោម។</p>
+</section>
+<section id="props">
+<h2>Props (វត្ថុតុបតែង)<a class="headerlink" href="#props" title="Link to this heading"></a></h2>
+<p>មិនមែនគ្រប់ឆាកទេដែលត្រូវការ props ប៉ុន្តែវាជាវិធីដ៏ល្អដើម្បីបន្ថែមព័ត៌មានលម្អិត — ភាពខុសគ្នារវាង render ធម្មតា និង render ដែលគួរឱ្យរំភើប។</p>
+<p>ក្នុង Daz Studio «Prop» គឺជាវត្ថុស្តាទិច (មិនអាច pose បាន) ណាមួយដែលផ្ទុកចូលឆាកបាន — ខ្លះរចនាឡើងដើម្បីប្រើជាមួយតួ (អាវុធិន, គ្រឿងអលង្ការ) ខ្លះនៅដាច់ដោយឡែក (តុ កៅអី កម្រាល)។</p>
+<ul class="simple">
+<li><p>Props ស្ថិតក្នុង category <strong>Props</strong> នៃ Smart Content។ បើកំពុងជ្រើសតួ ផ្ទាំងនឹងច្រោះមាតិកា — បើគ្មាន prop ស្រប category នេះអាចមិនលេចឡើងទាល់តែសោះ។ ដកការជ្រើសដោយចុចកន្លែងទទេក្នុង Viewport។</p></li>
+<li><p>អូសទម្លាក់មានប្រយោជន៍ជាពិសេសសម្រាប់ prop ដែលប្រើជាមួយតួ — ឧ. អូសដំបងទៅដាក់លើដៃ ឬខ្សែកទៅលើក។ ពេលអូស សង្កត់ទុកលើផ្នែករាងកាយរហូតដល់ម៉ឺនុយលេចឡើង រួចជ្រើសដើម្បី <strong>parent</strong> prop ទៅផ្នែកនោះ</p></li>
+<li><p>សង្កត់ <kbd class="kbd docutils literal notranslate">Alt</kbd> (Windows) / <kbd class="kbd docutils literal notranslate">Option</kbd> (Mac) ពេលអូស ដើម្បីបង្ហាញ drop target (ទីតាំងជាក់លាក់ដែលវត្ថុនឹងផ្ទុក)</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Prop ភាគច្រើនអាចប្រើជាមួយតួណាក៏បាន (ទោះរចនាសម្រាប់តួផ្សេង) ដោយការកែបន្តិចបន្តួច — ដកការជ្រើសមុនពេលរុករក props ដើម្បីឃើញទាំងអស់។</p>
+</div>
+</section>
+<section id="environment">
+<h2>បរិស្ថាន (Environment)<a class="headerlink" href="#environment" title="Link to this heading"></a></h2>
+<p>បរិស្ថានមិនចាំបាច់ជាចំណុចកណ្ដាលនៃឆាកទេ — ជាញឹកញាប់វាបន្ថែម «រសជាតិ» និងបរិបទទៅឆាក ជាស្រទាប់បន្ថែមនៃរឿងដែលអ្នកចង់ប្រាប់។</p>
+<ol class="arabic simple">
+<li><p><strong>ដកការជ្រើស</strong> បច្ចុប្បន្នសិន ដើម្បីកុំឱ្យ Smart Content ច្រោះបរិស្ថានចេញ</p></li>
+<li><p>ជ្រើស category <strong>Environments</strong> (ពង្រីកដើម្បីឃើញ subcategories)</p></li>
+<li><p>បរិស្ថានជាច្រើនបែកជាច្រើនចំណែកដែលផ្ទុកដាច់ដោយឡែកបាន — ប៉ុន្តែជាទូទៅមាន preset ដែលផ្ទុកទាំងអស់គ្នា ឈ្មោះដូចជា <strong>«Preload»</strong> ឬ <strong>«Load All»</strong>។ ចុចពីរដងលើ preset នោះ (ឬអូសទម្លាក់ — សង្កត់ Alt/Option ដើម្បីឃើញ drop target)</p></li>
+</ol>
+</section>
+<section id="content-type-indicators">
+<h2>សញ្ញាបង្ហាញប្រភេទមាតិកា (Content Type Indicators)<a class="headerlink" href="#content-type-indicators" title="Link to this heading"></a></h2>
+<p>មាតិកាក្នុង Smart Content មាន «Content Type Indicator» នៅជ្រុងខាងលើស្ដាំនៃរូបភាពតំណាង។ សញ្ញានេះមានគោលបំណងពីរ៖ <strong>ពណ៌</strong> ប្រាប់ពីឥរិយាបថពេលផ្ទុក · <strong>អក្សរ</strong> ប្រាប់ពីប្រភេទឯកសារ (actor, wardrobe, hair, environment, pose, light...)។</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15.0%" />
+<col style="width: 85.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>ពណ៌</p></th>
+<th class="head"><p>ឥរិយាបថពេលផ្ទុក</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>🟢 បៃតង</p></td>
+<td><p>ផ្ទុកវត្ថុថ្មីចូលឆាក (តួ សម្លៀកបំពាក់ prop...)</p></td>
+</tr>
+<tr class="row-odd"><td><p>🟡 លឿង</p></td>
+<td><p><strong>កែ</strong> វត្ថុដែលមានស្រាប់ក្នុងឆាក — ត្រូវការជ្រើសវត្ថុជាមុន (ឧ. Pose Presets, Material(s) Presets)</p></td>
+</tr>
+<tr class="row-even"><td><p>🔵 ខៀវ</p></td>
+<td><p>អាចផ្ទុកវត្ថុថ្មី <strong>ឬ</strong> កែវត្ថុស្រាប់ — អាស្រ័យលើការជ្រើសបច្ចុប្បន្ន (ឧ. Character Preset)</p></td>
+</tr>
+<tr class="row-odd"><td><p>🔴 ក្រហម</p></td>
+<td><p><strong>ជំនួស</strong> វត្ថុទាំងអស់ដែលមាន Content Type ដូចគ្នាក្នុងឆាក (ឧ. Light(s) Preset ជំនួសពន្លឺទាំងអស់ · Scene file ជំនួសឆាកទាំងមូល)</p></td>
+</tr>
+<tr class="row-even"><td><p>🟣 ម៉ាហ្សង់តា</p></td>
+<td><p>ឯកសារមាន Content Type ទូទៅពេក — មិនមានប្រយោជន៍ជាក់ស្ដែង (គួរតែមិនដែលជួប)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>សង្កត់ <kbd class="kbd docutils literal notranslate">Ctrl</kbd>/<kbd class="kbd docutils literal notranslate">Cmd</kbd> ពេលផ្ទុកមាតិកា DSON (ឯកសារ <code class="docutils literal notranslate"><span class="pre">.duf</span></code>) ដើម្បីបើកផ្ទាំងសន្ទនាគ្រប់គ្រងឥរិយាបថផ្ទុកលម្អិត។</p>
+</div>
+</section>
+<section id="scene">
+<h2>ផ្ទាំង Scene — លម្អិតបន្ថែម<a class="headerlink" href="#scene" title="Link to this heading"></a></h2>
+<p>តួ (Figures) ត្រូវបានរៀបចំជា <strong>លំដាប់ថ្នាក់ (Hierarchy)</strong> — អ្នកអាចជ្រើសកម្រិតកំពូល («root node», «root» ឬ «skeleton») ឬកម្រិតណាក៏បាន («node» ឬ «bone») ដូច្នេះអាចជ្រើសមនុស្សទាំងមូល ឬគ្រាន់តែដៃ ជើង ឬម្រាម។</p>
+<ul class="simple">
+<li><p><strong>ពង្រីក/បង្រួមទាំងអស់៖</strong> ចុចស្ដាំក្នុងផ្ទាំង → <strong>Expand &gt; Expand All</strong> ឬ <strong>Collapse &gt; Collapse All</strong></p></li>
+<li><p><strong>ពង្រីកម្ដងមួយៗ៖</strong> ចុចព្រួញខាងឆ្វេងវត្ថុ ឬប្រើគ្រាប់ព្រួញក្ដារចុច — ← បង្រួម · → ពង្រីក · ↑↓ ប្ដូរការជ្រើស</p></li>
+<li><p><strong>Parent/Child៖</strong> អូសវត្ថុ «កូន» ទៅដាក់លើវត្ថុ «ម្ដាយ» — ប្រអប់ពណ៌នឹងលេចជុំវិញម្ដាយ រួចលែង។ កូនដើរតាមម្ដាយគ្រប់ទីកន្លែង (ផ្លាស់ទី/បង្វិល/ប្ដូរទំហំ) ប៉ុន្តែម្ដាយមិនដើរតាមកូនទេ។ មានប្រយោជន៍សម្រាប់ props និងការរៀបចំឆាកជាក្រុម។ ឧទាហរណ៍៖ parent ដំបងទៅដៃរបស់តួ។</p></li>
+</ul>
+</section>
+<section id="viewport">
+<h2>ការគ្រប់គ្រងទិដ្ឋភាពក្នុង Viewport<a class="headerlink" href="#viewport" title="Link to this heading"></a></h2>
+<p>ឆាករបស់អ្នកមាន ៣ វិមាត្រ (ទទឹង កម្ពស់ ជម្រៅ) — អ្នកជាអ្នកដឹកនាំអាចមើលវាពីគ្រប់ទិស។ «Viewport Controls» ស្ថិតនៅ <strong>ជ្រុងខាងលើស្ដាំ</strong> នៃ Viewport (ពីលើ ទៅស្ដាំ ចុះក្រោម)៖</p>
+<ol class="arabic simple">
+<li><p>View Selection</p></li>
+<li><p>DrawStyle Options</p></li>
+<li><p>Viewport Options</p></li>
+<li><p>View: Orbit / Rotate / Bank</p></li>
+<li><p>View: Pan / Dolly</p></li>
+<li><p>View: Dolly Zoom / Focal Zoom</p></li>
+<li><p>View: Frame / Aim</p></li>
+<li><p>View: Reset</p></li>
+<li><p>Camera Cube</p></li>
+</ol>
+<figure class="align-default" id="id7">
+<a class="reference internal image-reference" href="../_images/ui_viewport.jpg"><img alt="Viewport និង Viewport Controls" src="../_images/ui_viewport.jpg" style="width: 640px;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Viewport និងកន្លែងដែល Viewport Controls ស្ថិតនៅ — រូបភាពពីឯកសារផ្លូវការ DAZ 3D</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>បើភ្លេចមុខងារ control ណាមួយ គ្រាន់តែដាក់ទ្រនិចកណ្ដុរលើវា — tooltip នឹងលេចឡើង។</p>
+</div>
+<section id="view-selection">
+<h3>View Selection<a class="headerlink" href="#view-selection" title="Link to this heading"></a></h3>
+<p>Daz Studio គាំទ្រកាមេរ៉ាច្រើន រួមទាំងទិដ្ឋភាព orthographic ជាច្រើន និង «Perspective View» មួយដែលដើរតួជា Director's Viewfinder។ ប្រើ «View Selection Menu» ដើម្បីប្ដូររវាងទិដ្ឋភាព កាមេរ៉ា ឬសូម្បីតែ directional lights។ ឈ្មោះដែលបង្ហាញពេលម៉ឺនុយបិទ = ឈ្មោះទិដ្ឋភាព/កាមេរ៉ា/ពន្លឺសកម្ម។ (លម្អិតនៅ <a class="reference internal" href="cameras.html"><span class="doc">ជំពូក ៦</span></a>)</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>សម្រាប់ជំពូកនេះ គួរជ្រើស <strong>Perspective View</strong>។</p>
+</div>
+</section>
+<section id="drawstyle-options">
+<h3>DrawStyle Options<a class="headerlink" href="#drawstyle-options" title="Link to this heading"></a></h3>
+<p>«DrawStyle» = របៀបដែល Daz Studio បង្ហាញ <strong>ការមើលជាមុន</strong> នៃឆាកក្នុង Viewport (រូបភាពចុងក្រោយពេល Render នឹងលម្អិតជាងនេះឆ្ងាយ — ពេលធ្វើការ Daz Studio បង្ហាញគុណភាពទាបដើម្បីសន្សំធនធាន និងឆ្លើយតបលឿន)។</p>
+<p>ជម្រើសមាន៖ <em>Wire Bounding Box</em>, <em>Solid Bounding Box</em>, <em>Wireframe</em>, <em>Texture Shaded</em> និង <em>Cartoon Shaded</em>។ លំនាំដើមគឺ <strong>Texture Shaded</strong> — លម្អិតបំផុតក្នុងការមើលជាមុន និងជាជម្រើសដែលអ្នកប្រើភាគច្រើនចូលចិត្ត។</p>
+</section>
+<section id="viewport-options">
+<h3>Viewport Options<a class="headerlink" href="#viewport-options" title="Link to this heading"></a></h3>
+<p>ម៉ឺនុយនេះអនុញ្ញាតឱ្យបត់បែន Viewport បន្ថែម៖</p>
+<ul class="simple">
+<li><p>Dock ឬ float ឱ្យ Viewport controls (លំនាំដើម = float)</p></li>
+<li><p>បិទ/បើក «Floor Grid», «Aspect Frame» និង «Camera Cube»</p></li>
+<li><p><strong>Change Background Color…</strong> — សកម្មភាពដែលគេប្រើច្រើនបំផុត៖ បើកផ្ទាំងសន្ទនា «Select Color» ដើម្បីជ្រើសពណ៌ណាក៏បានក្នុងវិសាលភាព RGB។ លំនាំដើមរបស់ Hollywood Blvd គឺខៀវស្រាល RGB <code class="docutils literal notranslate"><span class="pre">121,</span> <span class="pre">141,</span> <span class="pre">176</span></code> — ពណ៌ប្រផេះស្រស់ (ឧ. <code class="docutils literal notranslate"><span class="pre">94,</span> <span class="pre">94,</span> <span class="pre">94</span></code>) អាចស្រួលភ្នែកជាង។ Layout នីមួយៗមានពណ៌ផ្ទៃខាងក្រោយរៀងខ្លួន។</p></li>
+</ul>
+</section>
+<section id="view-orbit-rotate-bank">
+<h3>View: Orbit / Rotate / Bank<a class="headerlink" href="#view-orbit-rotate-bank" title="Link to this heading"></a></h3>
+<p>កែការបង្វិលនៃទិដ្ឋភាពសកម្ម៖</p>
+<ul class="simple">
+<li><p><strong>ចុចឆ្វេង + អូស</strong> = «Orbit» — ទិដ្ឋភាពវិលជុំវិញ focal point (បើមិនទាន់ Frame អ្វី វាវិលជុំវិញចំណុចមួយលើអ័ក្ស Y វិជ្ជមាន នៅកណ្ដាលឆាក)</p></li>
+<li><p><strong>ចុចស្ដាំ + អូស</strong> = «Rotate» — អូសឆ្វេង/ស្ដាំ បង្វិលតាមអ័ក្សឈរ · អូសលើ/ក្រោម បង្វិលតាមអ័ក្សដេក (ដូចញាក់ក្បាលរបស់អ្នក)</p></li>
+<li><p><strong>Ctrl/Cmd + ចុចស្ដាំ + អូស</strong> = «Bank» — អូសទៅឆ្វេង ទិដ្ឋភាពរមៀលទៅស្ដាំ · អូសទៅស្ដាំ រមៀលទៅឆ្វេង</p></li>
+</ul>
+</section>
+<section id="view-pan-dolly">
+<h3>View: Pan / Dolly<a class="headerlink" href="#view-pan-dolly" title="Link to this heading"></a></h3>
+<p>កែ <strong>ទីតាំង</strong> នៃទិដ្ឋភាពក្នុងលំហ ៣ វិមាត្រ៖</p>
+<ul class="simple">
+<li><p><strong>ចុចឆ្វេង + អូស</strong> = «Pan» — ផ្លាស់ទីឆ្វេង/ស្ដាំ និងលើ/ក្រោម ក្នុងប្លង់ស្របនឹងទិដ្ឋភាព។ ចំណាំ៖ control ត្រូវបានដាក់បញ្ច្រាស — អូសទៅឆ្វេង ទិដ្ឋភាពទៅស្ដាំ។ ស្ដាប់ទៅចម្លែក ប៉ុន្តែពេលសាកល្បងវាមានអារម្មណ៍ធម្មជាតិ។</p></li>
+<li><p><strong>ចុចស្ដាំ + អូស</strong> = «Dolly» — ផ្លាស់ទីឆ្វេង/ស្ដាំ និងចូល/ចេញ ក្នុងប្លង់ស្របនឹងឥត (ក៏បញ្ច្រាសដូចគ្នា)</p></li>
+</ul>
+</section>
+<section id="view-dolly-zoom-focal-zoom">
+<h3>View: Dolly Zoom / Focal Zoom<a class="headerlink" href="#view-dolly-zoom-focal-zoom" title="Link to this heading"></a></h3>
+<p>ជម្រើស Zoom ពីរប្រភេទ៖</p>
+<ul class="simple">
+<li><p><strong>Dolly Zoom</strong> (ចុចឆ្វេង + អូស) — ទិដ្ឋភាពទាំងមូលផ្លាស់ទីជិត/ឆ្ងាយពីវត្ថុ។ អូសថយក្រោយ = zoom in · អូសទៅមុខ = zoom out។ កង់កណ្ដុរ (scroll wheel) ក៏ធ្វើ Dolly Zoom ដែរ៖ រំកិលទៅមុខ = zoom out (រុញវត្ថុឱ្យឆ្ងាយ) · រំកិលថយក្រោយ = zoom in (ទាញវត្ថុមកជិត)</p></li>
+<li><p><strong>Focal Zoom</strong> (ចុចស្ដាំ + អូស) — ដូច zoom នៃកែវកាមេរ៉ា៖ ទីតាំងទិដ្ឋភាពនៅនឹងថ្កល់ ការ zoom មកពីការប្ដូរកែវ។ អូសលើ = zoom out · អូសក្រោម = zoom in។ Daz Studio zoom បានឆ្ងាយជាងកាមេរ៉ាពិតៗ ច្រើន — ប៉ុន្តែ focal zoom ខ្លាំងពេកបង្កឱ្យមានការបំភ្លៃ (distortion) ដែលអាចជា effect គួរឱ្យចាប់អារម្មណ៍បើនោះជាគោលបំណង។</p></li>
+</ul>
+<p>ចំណុចកណ្ដាលនៃ zoom = focal point នៃទិដ្ឋភាព (បើមិន Frame អ្វី = ចំណុចលើអ័ក្ស Y វិជ្ជមាននៅកណ្ដាលឆាក)។</p>
+</section>
+<section id="view-frame-aim">
+<h3>View: Frame / Aim<a class="headerlink" href="#view-frame-aim" title="Link to this heading"></a></h3>
+<p>Control ដ៏មានប្រយោជន៍សម្រាប់ «លោតទៅ» ឬ «តម្រង់» វត្ថុ៖</p>
+<ul class="simple">
+<li><p><strong>ចុចឆ្វេង</strong> = «Frame» — ជ្រើសវត្ថុក្នុងផ្ទាំង Scene សិន រួចទិដ្ឋភាពសកម្មនឹងលោតទៅ framing ការជ្រើសបច្ចុប្បន្នដោយស្វ័យប្រវត្តិ (Orbit/Rotate/Bank នៅដដែល ប្ដូរតែ Pan និង Zoom)។ ស្រួលខ្លាំងពេលឆាកមានបរិស្ថានធំ និងវត្ថុច្រើន។</p></li>
+<li><p><strong>ចុចស្ដាំ</strong> = «Aim» — Pan/Zoom នៅនឹងថ្កល់ ទិដ្ឋភាពគ្រាន់តែ <strong>បង្វិល</strong> ដើម្បីតម្រង់ការជ្រើស (រក្សាទីតាំងទិដ្ឋភាពបច្ចុប្បន្ន)</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ឥទ្ធិពលបន្ទាប់បន្សំ៖ Framing ដាក់ «Focal Point» នៅកណ្ដាល bounding box នៃការជ្រើស — ប៉ះពាល់ដល់របៀបដែល Orbit/Rotate/Bank និង Dolly Zoom ដំណើរការ (ព្រោះ control ទាំងពីរផ្អែកលើ focal point)។</p>
+</div>
+</section>
+<section id="view-reset">
+<h3>View: Reset<a class="headerlink" href="#view-reset" title="Link to this heading"></a></h3>
+<p>កំណត់តម្លៃទាំងអស់នៃទិដ្ឋភាព (dolly, zoom, pan, bank) ទៅលំនាំដើមវិញ — ស្រួលពេលអ្នកបានបង្វិល/bank ទិដ្ឋភាពខុសបំណង។</p>
+</section>
+<section id="camera-cube">
+<h3>Camera Cube<a class="headerlink" href="#camera-cube" title="Link to this heading"></a></h3>
+<p>គូបបីពណ៌នៅខាងឆ្វេងនៃ Viewport controls ផ្សេងទៀត៖</p>
+<ul class="simple">
+<li><p><strong>ចុចឆ្វេង + អូស</strong> នៅលើគូប = orbit ជុំវិញ focal point (ដូច Orbit/Rotate/Bank) — អត្ថប្រយោជន៍សំខាន់គឺវាផ្ដល់ <strong>ចំណុចយោង</strong> ថាទិដ្ឋភាពកំពុងសម្លឹងទៅទិសណា</p></li>
+<li><p><strong>Vantage Points</strong> — ពេលដាក់ទ្រនិចលើគូប ផ្នែកខ្លះលេចពណ៌ (មុខ ជ្រុង និងគែមនៃគូប)។ ចុចឆ្វេងពេល vantage point លេចពណ៌ → ទិដ្ឋភាពលោតទៅទីតាំងកំណត់ជាមុន (មុខ ក្រោយ ឆ្វេង ស្ដាំ លើ ក្រោម ឬផ្សំគ្នា)</p></li>
+</ul>
+</section>
+</section>
+<section id="parameters">
+<h2>កែប្រែមាតិកាដោយផ្ទាំង Parameters<a class="headerlink" href="#parameters" title="Link to this heading"></a></h2>
+<p>ឥឡូវអ្នកចេះផ្ទុក ជ្រើស និង parent មាតិកា ព្រមទាំងគ្រប់គ្រងទិដ្ឋភាពហើយ — មកសិក្សាការ <strong>កែប្រែ</strong> វា។ ជម្រើសនីមួយៗក្នុងផ្ទាំង Parameters ហៅថា «Property» ឬ «Parameter» (ប្រើជំនួសគ្នាបាន) ដែលរៀបចំជា «Property Groups»។</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>ដើម្បីឱ្យ properties លេចក្នុង Parameters ត្រូវជ្រើសវត្ថុក្នុងផ្ទាំង Scene សិន។ Properties អាចប្ដូរអាស្រ័យលើវត្ថុ ឬ node ដែលជ្រើស — សាកជ្រើស node ផ្សេងៗដើម្បីឃើញភាពខុសគ្នា។</p>
+</div>
+<section id="translation">
+<h3>Translation (ផ្លាស់ទី)<a class="headerlink" href="#translation" title="Link to this heading"></a></h3>
+<p>ទីតាំងរបស់វត្ថុតាមអ័ក្ស X, Y, Z។ រកបានតាម៖ ពង្រីក group <strong>General</strong> → <strong>Transforms</strong> → <strong>Translation</strong> (ជួរឆ្វេង) រួចលក្ខណៈសម្បត្តិលេចនៅជួរស្ដាំ។ កែដោយអូស sliders។</p>
+<p>ពណ៌សម្គាល់អ័ក្ស (ប្រើគ្រប់កន្លែងក្នុង Daz Studio)៖ 🔴 ក្រហម = X · 🟢 បៃតង = Y · 🔵 ខៀវ = Z។</p>
+<p>ក៏អាចធ្វើក្នុង Viewport ដោយ <strong>Universal Tool</strong> ដែរ៖ បើកឧបករណ៍ពី toolbar ជ្រើសវត្ថុ រួច «Universal Manipulator» នឹងលេចឡើង —</p>
+<ul class="simple">
+<li><p>អូស <strong>ព្រួញ</strong> ក្រហម/បៃតង/ខៀវ នៅចុងអ័ក្ស = ផ្លាស់ទីតាមអ័ក្សនោះ</p></li>
+<li><p>អូស <strong>ត្រីកោណ</strong> នៅជ្រុងក្រៅនៃប្លង់ (រវាងអ័ក្សពីរជាប់គ្នា) = ផ្លាស់ទីក្នុងប្លង់នោះ</p></li>
+</ul>
+</section>
+<section id="rotation">
+<h3>Rotation (បង្វិល)<a class="headerlink" href="#rotation" title="Link to this heading"></a></h3>
+<p>បង្វិលតួទាំងមូល ឬឆ្អឹង (bone) តែមួយ — ការជ្រើសបច្ចុប្បន្នសំខាន់ណាស់! Properties នៅក្នុង group <strong>Rotation</strong> (ក្រោម <strong>Transforms</strong> ← <strong>General</strong>)។ ពណ៌ដូចគ្នា៖ ក្រហម = បង្វិលជុំវិញ X · បៃតង = Y · ខៀវ = Z។</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>សាកបង្វិលមិនត្រឹមតែ root node ទេ — សាកបង្វិលឆ្អឹងផង (ឧ. thigh, shin, ក្បាល ក ដៃក្រោម) ដើម្បីឃើញថា Rotation ជាឧបករណ៍ដ៏មានឥទ្ធិពលសម្រាប់ posing (មើល <a class="reference internal" href="posing.html"><span class="doc">ជំពូក ៥</span></a>)។</p>
+</div>
+<p>ក្នុង Viewport៖ បើក Universal Tool ជ្រើសវត្ថុ រួចប្រើ <strong>ធ្នូ (arcs)</strong> ក្រហម/បៃតង/ខៀវ — ដាក់ទ្រនិចលើធ្នូរហូតដល់វាលេចពណ៌លឿង និងរង្វង់ពេញលេញលេចឡើង រួចចុចឆ្វេង + អូសដើម្បីបង្វិលជុំវិញអ័ក្សនោះ។</p>
+</section>
+<section id="scale">
+<h3>Scale (ប្ដូរទំហំ)<a class="headerlink" href="#scale" title="Link to this heading"></a></h3>
+<p>ប្ដូរទំហំធៀបនៃវត្ថុ — ធំជាង ឬតូចជាង។ វត្ថុភាគច្រើនអាច scale ទាំងមូល ឬតាមអ័ក្ស X, Y, Z ដាច់ដោយឡែក។ Properties នៅក្នុង group <strong>Scale</strong> (ក្រោម <strong>Transforms</strong> ← <strong>General</strong>) — បើមិនឃើញជម្រើស scale សាកប្ដូរការជ្រើសទៅ root node។</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>ប្រយ័ត្នពេល scale — វាអាចបង្កឱ្យមានការបំភ្លៃលើវត្ថុ ឬតួ។ មិនមែនគ្រប់ការជ្រើសសុទ្ធតែមាន scale តាម X, Y, Z ទេ។</p>
+</div>
+<p>ក្នុង Viewport៖ ប្រើ Universal Tool — អូស <strong>គូបស</strong> នៅកណ្ដាល manipulator (scale ស្មើៗគ្នា) ឬគូប ក្រហម/បៃតង/ខៀវ នៅតាមអ័ក្ស (scale តាមអ័ក្សនីមួយៗ)។</p>
+</section>
+<section id="fit-to">
+<h3>Fit To (សម្លៀកបំពាក់ស្របនឹងតួ)<a class="headerlink" href="#fit-to" title="Link to this heading"></a></h3>
+<p>ពេលផ្ទុកសម្លៀកបំពាក់ ឬសក់លើតួ អ្នកចង់ឱ្យវាផ្លាស់ទីតាមតួ (បត់ដៃ → អាវត្រូវបត់តាម)។ Daz Studio ធ្វើរឿងនេះតាមដំណើរការ <strong>«Fitting»</strong> ឬ <strong>«Conforming»</strong> — សម្លៀកបំពាក់ និងសក់ភាគច្រើនត្រូវបានរៀបចំឱ្យ follow តួដែលវា fit។</p>
+<p>បើសម្លៀកបំពាក់មិន fit ដោយស្វ័យប្រវត្តិ៖</p>
+<ol class="arabic simple">
+<li><p>ជ្រើស <strong>វត្ថុសម្លៀកបំពាក់</strong> (មិនមែនតួ) ក្នុងផ្ទាំង Scene</p></li>
+<li><p>បើក Parameters → group <strong>General</strong> → <strong>Misc</strong></p></li>
+<li><p>រកលក្ខណៈសម្បត្តិ <strong>«Fit To»</strong> — បើមិន fit នឹងអ្វីទេ តម្លៃបង្ហាញ «None…»</p></li>
+<li><p>ចុចលើតម្លៃបច្ចុប្បន្ន → ផ្ទាំងសន្ទនា «Fit To» លេចឡើង → ជ្រើសតួពីម៉ឺនុយធ្លាក់ចុះ</p></li>
+</ol>
+<p>សម្លៀកបំពាក់រចនាសម្រាប់តួជាក់លាក់ ប៉ុន្តែអាច fit វាទៅតួផ្សេងបានដោយសកម្មភាព <strong>«Auto-Fit»</strong> — លទ្ធផលប្រែប្រួល ហើយមិនមែនគ្រប់សម្លៀកបំពាក់សុទ្ធតែ auto-fit បានទេ ប៉ុន្តែសាកល្បងមិនខាតបង់ទេ (ជាមួយការកែបន្តិចបន្តួច អ្នកអាចភ្ញាក់ផ្អើល)។</p>
+</section>
+<section id="property-groups">
+<h3>Property Groups សំខាន់ៗផ្សេងទៀត<a class="headerlink" href="#property-groups" title="Link to this heading"></a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 22.0%" />
+<col style="width: 78.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Group</p></th>
+<th class="head"><p>ខ្លឹមសារ</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>General</strong></p></td>
+<td><p>ផ្ទុក group Transforms (ខាងលើ) + លក្ខណៈសម្បត្តិកែ smoothing និង resolution នៃ mesh</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Actor</strong></p></td>
+<td><p>លក្ខណៈសម្បត្តិ shaping / «Morphs» សម្រាប់ប្ដូររូបរាងតួ (មើល <a class="reference internal" href="shaping.html"><span class="doc">ជំពូក ៤</span></a>) — លក្ខណៈសម្បត្តិទាំងអស់ទីនេះក៏មានក្នុងផ្ទាំង Shaping ដែរ</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Display</strong></p></td>
+<td><p>ការកំណត់បង្ហាញ៖ វត្ថុលេចក្នុង render ឬទេ វត្ថុបង្កើតស្រមោលឬទេ និងជម្រើសផ្សេងៗទៀត</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Pose Controls</strong></p></td>
+<td><p>លក្ខណៈសម្បត្តិសម្រាប់ pose តួ — គ្រប់គ្រងចលនាជាក់លាក់ (លើក/បញ្ចុះដៃ បើក/បិទមាត់...) ក៏មានក្នុងផ្ទាំង Posing ដែរ</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="id4">
+<h2>រក្សាទុក និងបើកឆាកឡើងវិញ<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<p>បន្ទាប់ពីចំណាយពេលច្រើនម៉ោងរៀបចំឆាកដ៏ល្អឥតខ្ចោះ អ្នកនឹងចង់រក្សាទុកវា។ វិធីមូលដ្ឋានបំផុតគឺរក្សាទុកឯកសារ <strong>«Scene»</strong> — ព័ត៌មានអំពីអ្វីៗទាំងអស់ក្នុងឆាក (តួ សម្លៀកបំពាក់ props ពន្លឺ កាមេរ៉ា...) ត្រូវបានរក្សាទុក។</p>
+<ul class="simple">
+<li><p><strong>រក្សាទុក៖</strong> <strong>File &gt; Save…</strong> ឬ <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">S</kbd> (Mac: <kbd class="kbd docutils literal notranslate">Cmd</kbd> + <kbd class="kbd docutils literal notranslate">S</kbd>) → ផ្ទាំងសន្ទនា «Filtered Save» សម្រាប់ដាក់ឈ្មោះ និងជ្រើសទីតាំង។ ចាំទីតាំងដែលរក្សាទុក! រយៈពេលអាស្រ័យលើទំហំឆាក និងល្បឿនម៉ាស៊ីន (វិនាទី ដល់ នាទី)។</p></li>
+<li><p><strong>បើកឡើងវិញ៖</strong> <strong>File &gt; Open…</strong> ឬ <kbd class="kbd docutils literal notranslate">Ctrl</kbd>/<kbd class="kbd docutils literal notranslate">Cmd</kbd> + <kbd class="kbd docutils literal notranslate">O</kbd>។ ⚠️ ការបើក scene file <strong>ជំនួស</strong> ឆាកបច្ចុប្បន្នទាំងស្រុង — រក្សាទុកការងារមុនពេលបើកឯកសារថ្មី!</p></li>
+<li><p><strong>បញ្ចូលគ្នា៖</strong> <strong>File &gt; Merge…</strong> ឬ <kbd class="kbd docutils literal notranslate">Ctrl</kbd>/<kbd class="kbd docutils literal notranslate">Cmd</kbd> + <kbd class="kbd docutils literal notranslate">Shift</kbd> + <kbd class="kbd docutils literal notranslate">O</kbd> — បញ្ចូល scene file ទៅក្នុងឆាកដែលមានស្រាប់ (មិនជំនួសទេ)។</p></li>
+</ul>
+<p>ចុងបញ្ចប់ — អ្នកបានសាងសង់ឆាករួចហើយ ហេតុអ្វីមិន Render វា? បើកម៉ឺនុយ <strong>Render</strong> នៅ Main Menu Bar រួចជ្រើស <strong>Render</strong> ឬប្រើ <kbd class="kbd docutils literal notranslate">Ctrl</kbd>/<kbd class="kbd docutils literal notranslate">Cmd</kbd> + <kbd class="kbd docutils literal notranslate">R</kbd>។ លទ្ធផលចុងក្រោយនឹងលេចក្នុងបង្អួចថ្មី។ (លម្អិតនៅ <a class="reference internal" href="rendering.html"><span class="doc">ជំពូក ៨</span></a>)</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="navigating.html" class="btn btn-neutral float-left" title="ជំពូក ១ — ស្វែងយល់ពីចំណុចប្រទាក់" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="textures.html" class="btn btn-neutral float-right" title="ជំពូក ៣ — វាយនភាព ផ្ទៃ និងសម្ភារៈ" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright មាតិកាដើម © DAZ 3D, LP (CC BY 3.0) · ការបកប្រែខ្មែរ © សហគមន៍ (CC BY 4.0).
+      <span class="lastupdated">Last updated on 20 តុលា 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

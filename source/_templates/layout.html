@@ -1,0 +1,27 @@
+{% extends "!layout.html" %}
+
+{#- Khmer fonts + flash-free theme init — everything else stays stock RTD -#}
+{% block extrahead %}
+{{ super() }}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@300;400;500;600;700&amp;family=Noto+Serif+Khmer:wght@500;600;700&amp;display=swap" rel="stylesheet">
+{#- SEO: icons, bilingual meta, Open Graph, Twitter, JSON-LD (invisible to users, read by robots) -#}
+<link rel="apple-touch-icon" href="{{ pathto('_static/daz-logo.png', 1) }}">
+{%- set relpage = '' if pagename == master_doc else pagename + '.html' %}
+<link rel="canonical" href="https://seyhalite.github.io/daz3d-khmer-docs/{{ relpage }}">
+<meta name="keywords" content="Daz Studio, Daz Studio 4, Daz Studio Khmer, DAZ 3D documentation, Khmer 3D tutorial, ឯកសារ Daz Studio, បកប្រែជាភាសាខ្មែរ, មគ្គុទ្ទេសក៍ខ្មែរ, 3D rendering, Genesis figure, morph, posing, lighting, depth of field, ភាសាខ្មែរ">
+<meta property="og:site_name" content="Daz Studio 4.x — ឯកសារជាភាសាខ្មែរ">
+<meta property="og:title" content="{{ title|striptags|e }}">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="km_KH">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:image" content="https://seyhalite.github.io/daz3d-khmer-docs/_static/daz-logo.png">
+<meta property="og:url" content="https://seyhalite.github.io/daz3d-khmer-docs/{{ relpage }}">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ title|striptags|e }}">
+<meta name="twitter:image" content="https://seyhalite.github.io/daz3d-khmer-docs/_static/daz-logo.png">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "WebSite", "name": "Daz Studio 4.x — ឯកសារជាភាសាខ្មែរ", "alternateName": "Daz Studio 4.x Khmer Documentation", "url": "https://seyhalite.github.io/daz3d-khmer-docs/", "inLanguage": ["km", "en"], "description": "Khmer translation of the official Daz Studio 4.x documentation with official screenshots. ការបកប្រែជាភាសាខ្មែរនៃឯកសារផ្លូវការ Daz Studio 4.x។", "potentialAction": {"@type": "SearchAction", "target": "https://seyhalite.github.io/daz3d-khmer-docs/search.html?q={search_term_string}", "query-input": "required name=search_term_string"}}
+</script>
+{% endblock %}

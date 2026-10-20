@@ -1,0 +1,9 @@
+# Sphinx
+source/_build/
+*.pyc
+__pycache__/
+.doctrees/
+
+# OS
+.DS_Store
+Thumbs.db

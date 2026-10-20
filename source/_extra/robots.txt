@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /_sources/
+Disallow: /_downloads/
+
+Sitemap: https://seyhalite.github.io/daz3d-khmer-docs/sitemap.xml

@@ -1,0 +1,288 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="km" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta content="ជំពូក ៨៖ Rendering — Render Quality, Dimensions, Max Ray Trace Depth, Shadow Samples, Shading Rate និងការរក្សាទុករូបភាព។ Chapter 8: render settings and saving final images." name="description" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ជំពូក ៨ — Rendering (ចេញជារូបភាព និងវីដេអូ) &mdash; Daz Studio 4.x ឯកសារខ្មែរ</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/khmer.css?v=ca5001cf" />
+
+  
+    <link rel="shortcut icon" href="../_static/daz-logo.png"/>
+    <link rel="canonical" href="https://seyhalite.github.io/daz3d-khmer-docs/chapters/rendering.html" />
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=c23564c2"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="មេរៀន៖ ការប្ដូរ Layout និង Interface Style" href="../guide/layouts.html" />
+    <link rel="prev" title="ជំពូក ៧ — ពន្លឺ" href="lights.html" />
+ 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@300;400;500;600;700&amp;family=Noto+Serif+Khmer:wght@500;600;700&amp;display=swap" rel="stylesheet"><link rel="apple-touch-icon" href="../_static/daz-logo.png">
+<link rel="canonical" href="https://seyhalite.github.io/daz3d-khmer-docs/chapters/rendering.html">
+<meta name="keywords" content="Daz Studio, Daz Studio 4, Daz Studio Khmer, DAZ 3D documentation, Khmer 3D tutorial, ឯកសារ Daz Studio, បកប្រែជាភាសាខ្មែរ, មគ្គុទ្ទេសក៍ខ្មែរ, 3D rendering, Genesis figure, morph, posing, lighting, depth of field, ភាសាខ្មែរ">
+<meta property="og:site_name" content="Daz Studio 4.x — ឯកសារជាភាសាខ្មែរ">
+<meta property="og:title" content="ជំពូក ៨ — Rendering (ចេញជារូបភាព និងវីដេអូ)">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="km_KH">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:image" content="https://seyhalite.github.io/daz3d-khmer-docs/_static/daz-logo.png">
+<meta property="og:url" content="https://seyhalite.github.io/daz3d-khmer-docs/chapters/rendering.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ជំពូក ៨ — Rendering (ចេញជារូបភាព និងវីដេអូ)">
+<meta name="twitter:image" content="https://seyhalite.github.io/daz3d-khmer-docs/_static/daz-logo.png">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "WebSite", "name": "Daz Studio 4.x — ឯកសារជាភាសាខ្មែរ", "alternateName": "Daz Studio 4.x Khmer Documentation", "url": "https://seyhalite.github.io/daz3d-khmer-docs/", "inLanguage": ["km", "en"], "description": "Khmer translation of the official Daz Studio 4.x documentation with official screenshots. ការបកប្រែជាភាសាខ្មែរនៃឯកសារផ្លូវការ Daz Studio 4.x។", "potentialAction": {"@type": "SearchAction", "target": "https://seyhalite.github.io/daz3d-khmer-docs/search.html?q={search_term_string}", "query-input": "required name=search_term_string"}}
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #1f2328" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Daz Studio 4.x
+              <img src="../_static/daz-logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">ការចាប់ផ្តើម</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">ចាប់ផ្តើមប្រើ Daz Studio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../userguide.html">មគ្គុទ្ទេសក៍អ្នកប្រើប្រាស់ (សង្ខេប)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">មគ្គុទ្ទេសក៍ចាប់ផ្តើមរហ័ស — Barefoot Dancer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ជំពូកមគ្គុទ្ទេសក៍អ្នកប្រើប្រាស់</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="navigating.html">ជំពូក ១ — ស្វែងយល់ពីចំណុចប្រទាក់</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scene.html">ជំពូក ២ — សាងសង់ឆាក</a></li>
+<li class="toctree-l1"><a class="reference internal" href="textures.html">ជំពូក ៣ — វាយនភាព ផ្ទៃ និងសម្ភារៈ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shaping.html">ជំពូក ៤ — Shaping (កែរូបរាង)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="posing.html">ជំពូក ៥ — Posing (កែកាយវិការ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cameras.html">ជំពូក ៦ — កាមេរ៉ា និងទិដ្ឋភាព</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lights.html">ជំពូក ៧ — ពន្លឺ</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">ជំពូក ៨ — Rendering (ចេញជារូបភាព និងវីដេអូ)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#render-settings">ផ្ទាំង Render Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#page-advanced">ការកំណត់កម្រិតខ្ពស់ (Page Advanced)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#render-settings-presets">Render Settings Presets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#final-render">ចាប់ផ្តើម Final Render</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#render">រក្សាទុកលទ្ធផល Render</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">សេចក្ដីបញ្ចប់</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">មេរៀនបន្ថែម</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide/layouts.html">មេរៀន៖ ការប្ដូរ Layout និង Interface Style</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ឯកសារយោង</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../reference/overview.html">មគ្គុទ្ទេសក៍យោង (សង្ខេប)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/interface.html">ចំណុចប្រទាក់អ្នកប្រើប្រាស់ (UI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/glossary.html">វចនានុក្រមពាក្យបច្ចេកទេស</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #1f2328" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Daz Studio 4.x</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">ជំពូក ៨ — Rendering (ចេញជារូបភាព និងវីដេអូ)</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/SeyhaLite/daz3d-khmer-docs/edit/main/source/chapters/rendering.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="rendering">
+<h1>ជំពូក ៨ — Rendering (ចេញជារូបភាព និងវីដេអូ)<a class="headerlink" href="#rendering" title="Link to this heading"></a></h1>
+<p class="src-note">បកប្រែពី៖ <a href="https://docs.daz3d.com/public/software/dazstudio/4/userguide/chapters/rendering/start" target="_blank" rel="noopener">VIII — Rendering</a> · <i>The Fruits of Your Labors</i></p><p><strong>Rendering</strong> គឺដំណើរការបំលែងឆាក 3D របស់អ្នកទៅជារូបភាព ២ វិមាត្រ ឬ animation — ជាជំហានចុងក្រោយនៃលំហូរការងារ និងជាពេលដែលអ្នក «ប្រមូលផល» នៃការងារទាំងអស់។</p>
+<p>ពេល Render កម្មវិធីគណនាតម្លៃ RGB សម្រាប់ pixel នីមួយៗ ដោយផ្អែកលើពន្លឺ ផ្ទៃ poses shaping ជាដើម។ ប៉ុន្តែការ Render មិនមែនគ្រាន់តែចុចប៊ូតុងទេ — <strong>ការកំណត់ Render (Render Settings)</strong> កំណត់គុណភាព និងរូបរាងទាំងមូលនៃរូបភាព។ តួអង្គអស្ចារ្យ + pose ស្អាត + ពន្លឺល្អ ក៏អាចចេញជារូបភាពគុណភាពទាបបាន បើការកំណត់មិនត្រឹមត្រូវ។</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ជំពូកនេះប្រើ Activity <strong>'Render'</strong> នៃ layout Hollywood Blvd។</p>
+</div>
+<section id="render-settings">
+<h2>ផ្ទាំង Render Settings<a class="headerlink" href="#render-settings" title="Link to this heading"></a></h2>
+<p>កន្លែងមើល និងបត់បែនការកំណត់ Render ទាំងអស់ — ស្ថិតនៅខាងឆ្វេងនៃចំណុចប្រទាក់។ មាន ២ pages៖</p>
+<ul class="simple">
+<li><p><strong>General</strong> — ការកំណត់មូលដ្ឋាន (Quality, Render Style, Dimensions)</p></li>
+<li><p><strong>Advanced</strong> — រួមការកំណត់ទាំងអស់របស់ General + ការកំណត់កម្រិតខ្ពស់បន្ថែម</p></li>
+</ul>
+<section id="render-quality">
+<h3>Render Quality<a class="headerlink" href="#render-quality" title="Link to this heading"></a></h3>
+<p>ការកំណត់ដែលមានទីតាំងលេចធ្លោនៅផ្នែកខាងលើផ្ទាំង។ គោលការណ៍សាមញ្ញ៖ <strong>គុណភាពខ្ពស់ = Render យូរ</strong> (អាច «លះបង់» គុណភាពដើម្បីល្បឿន)។</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 12.0%" />
+<col style="width: 88.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>កម្រិត</p></th>
+<th class="head"><p>លក្ខណៈ</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>4</strong> (ខ្ពស់បំផុត)</p></td>
+<td><p>ប្រើ <strong>software render engine</strong> — ឃើញឥទ្ធិពលពេញលេញនៃផ្ទៃ ពន្លឺ និងស្រមោល។ ការគណនាធ្វើដោយ CPU ដូច្នេះល្បឿន processor កំណត់រយៈពេល។ <strong>ប្រើសម្រាប់ final render ជានិច្ច</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>1–3</strong></p></td>
+<td><p>ការគណនាដោយ <strong>កាតក្រាហ្វិក</strong> — ល្បឿន និងគុណភាពអាស្រ័យលើកាត។ ជម្រើសល្អសម្រាប់ preview ប៉ុន្តែ software render តែងតែមានគុណភាពខ្ពស់ជាង មិនថាកាតល្អប៉ុណ្ណាទេ</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>0</strong> (ទាបបំផុត)</p></td>
+<td><p>គ្រាន់តែជា <strong>OpenGL preview</strong> — ដូចថតរូបភាពអ្វីដែលអ្នកឃើញក្នុង Viewport។ ពន្លឺគុណភាពទាបបំផុត <strong>គ្មានស្រមោល</strong> — ប៉ុន្តែលឿនស្ទើរភ្លាមៗ</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="render-style">
+<h3>Render Style<a class="headerlink" href="#render-style" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Default</strong> — Render ដោយប្រើការកំណត់សម្ភារៈដែលមានក្នុងឆាកដូចដែលវាមាន</p></li>
+<li><p><strong>Cartoon</strong> — Daz Studio អនុវត្ត toon version នៃ default surface shader ទៅផ្ទៃទាំងអស់ដែលប្រើ «DAZ Studio Default» shader (ការកំណត់ទាំងអស់ត្រូវបានផ្ទេរទៅ toon shader)</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Shader ទាំងពីរល្អដូចគ្នា — សាក Render ឆាកតែមួយជាមួយ style ទាំងពីរដើម្បីឃើញភាពខុសគ្នា!</p>
+</div>
+</section>
+<section id="dimensions">
+<h3>Dimensions (ទំហំ និងសមាមាត្រ)<a class="headerlink" href="#dimensions" title="Link to this heading"></a></h3>
+<p>កំណត់ទំហំ («Size» = ចំនួន <strong>Pixels</strong>) និងសមាមាត្រ («Aspect Ratio» = <strong>Aspect</strong>) នៃរូបភាព៖</p>
+<ul class="simple">
+<li><p><strong>Preset</strong> — ម៉ឺនុយធ្លាក់ចុះជាមួយសមាមាត្រស្រាប់ពីឧស្សាហកម្មភាពយន្ត/ថតរូប៖ 4:3, 16:9, Super 8mm និងផ្សេងៗទៀត។ បង្កើតសមាមាត្រផ្ទាល់ខ្លួន? ចុច <strong>'Save Preset…'</strong> ដើម្បីរក្សាទុក (វានឹងលេចក្នុងបញ្ជី Preset)</p></li>
+<li><p><strong>Pixels</strong> — ប្រអប់ទី ១ = កម្ពស់ · ទី ២ = ទទឹង។ បើ <strong>'Constrain Proportions'</strong> ធីក ការកែប្រអប់មួយនឹងកែប្រអប់មួយទៀតដោយស្វ័យប្រវត្តិ។ ⚠️ Pixels កាន់តែច្រើន = Render កាន់តែយូរ</p></li>
+<li><p><strong>Aspect</strong> — កម្ពស់/ទទឹងធៀប (វាយលេខផ្ទាល់ខ្លួនបាន)។ ការប្ដូរ Aspect នឹង update «Aspect Frame» ក្នុង Viewport (បើបើក)</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>តាមលំនាំដើម <strong>Aspect Frame បិទ</strong>។ បើកវាដើម្បីឃើញច្បាស់ថាផ្ទៃណានៃឆាកនឹងត្រូវ Render៖ Viewport Options Menu → <strong>'Show Aspect Frame'</strong> (លើកលែងពេល Aspect = 'Active Viewport')។</p>
+</div>
+</section>
+</section>
+<section id="page-advanced">
+<h2>ការកំណត់កម្រិតខ្ពស់ (Page Advanced)<a class="headerlink" href="#page-advanced" title="Link to this heading"></a></h2>
+<p>ការកំណត់ខាងក្រោមលេចឡើងក្នុង page <strong>Advanced</strong> ពេល Render Quality = <strong>4</strong>។ ក្នុងចំណោមការកំណត់ជាច្រើន នេះជា ៣ សំខាន់បំផុតសម្រាប់គុណភាព៖</p>
+<p><strong>Max Ray Trace Depth</strong> — ចំនួនដងដែលកាំរស្មីពន្លឺ «លោត» (bounces) ក្នុងការគណនាមួយ។ លំនាំដើម = <strong>2</strong> ដែលគ្រប់គ្រាន់សម្រាប់ render ភាគច្រើន។ បង្កើនតែពេលឆាកមាន <strong>ផ្ទៃចំណាំងផ្លាតច្រើន</strong> — ការបង្កើនអាចធ្វើឱ្យរយៈពេល Render កើនឡើងយ៉ាងខ្លាំង!</p>
+<p><strong>Shadow Samples</strong> — ចំនួន samples ដែល render engine ប្រើដើម្បីបង្កើតស្រមោល។ Samples ច្រើន = ស្រមោលគុណភាពខ្ពស់ + ពេលយូរ · samples តិច = លឿន ប៉ុន្តែស្រមោលអាចគ្រាប់ៗ (grainy)។ លំនាំដើម = <strong>16</strong> — កែតាមចំនួនពន្លឺ តួនាទីរបស់ស្រមោលក្នុងឆាក និង Shadow Softness។</p>
+<p><strong>Shading Rate</strong> — កម្រិតព័ត៌មានលម្អិតនៃ render។ Rate <strong>ខ្ពស់</strong> = Render លឿន ប៉ុន្តែបាត់បង់ព័ត៌មានលម្អិត · Rate <strong>ទាប</strong> = ព័ត៌មានលម្អិតច្រើនបំផុត។ លំនាំដើម = <strong>1.00</strong> (គោលល្អសម្រាប់ render ភាគច្រើន)។</p>
+<ul class="simple">
+<li><p>Portrait ជិតមុខ (close-up)? → ដាក់ rate <strong>ទាប</strong> ដើម្បីចាប់ព័ត៌មានលម្អិតអតិបរមា</p></li>
+<li><p>ប្រធានបទនៅឆ្ងាយ? → ដាក់ rate <strong>ខ្ពស់</strong> បាន (ព័ត៌មានលម្អិតតូចៗមិនឃើញទេ)</p></li>
+<li><p>Render យូរពេក? → ដំឡើង rate · ត្រូវការព័ត៌មានលម្អិតបន្ថែម? → បន្ថយ rate</p></li>
+</ul>
+</section>
+<section id="render-settings-presets">
+<h2>Render Settings Presets<a class="headerlink" href="#render-settings-presets" title="Link to this heading"></a></h2>
+<p>Presets អនុញ្ញាតឱ្យរក្សាទុក/ផ្ទុកការកំណត់ Render — preset រួមព័ត៌មាន <strong>គ្រប់ការកំណត់</strong> ទាំង page General និង Advanced។</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>ពេលផ្ទុក Render Settings Preset វានឹង <strong>ជំនួសការកំណត់ទាំងអស់</strong> របស់អ្នក។</p>
+</div>
+<ul class="simple">
+<li><p><strong>រក្សាទុក៖</strong> កំណត់ការកំណត់ឱ្យដូចចិត្តសិន → <strong>File &gt; Save As &gt; Render Settings Preset…</strong> → ផ្ទាំងសន្ទនា «Filtered Save» (ដាក់ឈ្មោះ + ទីតាំង) → <strong>Save</strong></p></li>
+<li><p><strong>ផ្ទុក៖</strong> ពីផ្ទាំង <strong>Content Library</strong> ឬ <strong>Smart Content</strong> — រុករករហូតដល់ឃើញ preset រួចចុចពីរដង។ Preset ដែលទើបរក្សាទុកស្ថិតក្រោម category <strong>'Uncategorized'</strong> ក្នុង Smart Content</p></li>
+</ul>
+</section>
+<section id="final-render">
+<h2>ចាប់ផ្តើម Final Render<a class="headerlink" href="#final-render" title="Link to this heading"></a></h2>
+<p>ឆាករៀបចំរួចរាល់ ពន្លឺត្រឹមត្រូវ សម្ភារៈស្អាត សមាសភាព និង framing ល្អឥតខ្ចោះ — ដល់ពេល Render!</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Rendering ជាដំណើរការដែលប្រើធនធានខ្លាំង — អាចចំណាយពីវិនាទី ដល់ នាទី ម៉ោង ឬសូម្បីតែ <strong>ថ្ងៃ</strong> (អាស្រ័យលើម៉ាស៊ីន និងភាពស្មុគស្មាញនៃឆាក)។ <strong>រក្សាទុកឆាកមុនពេល Render ជានិច្ច</strong> (<strong>File &gt; Save</strong>) — បើមានអ្វីខុសប្រក្រតី អ្នកមិនបាត់បង់ការងារទេ។</p>
+</div>
+<p>វិធីចាប់ផ្តើម Render (ជ្រើសមួយ)៖</p>
+<ul class="simple">
+<li><p>ចុចប៊ូតុង <strong>'Render'</strong> នៅផ្នែកខាងលើនៃផ្ទាំង Render Settings</p></li>
+<li><p>ចុចប៊ូតុង <strong>'Render'</strong> ក្នុង toolbar</p></li>
+<li><p>ម៉ឺនុយ <strong>Render &gt; Render</strong> នៅ Main Menu Bar</p></li>
+<li><p>ផ្លូវកាត់ <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">R</kbd> (PC) / <kbd class="kbd docutils literal notranslate">Cmd</kbd> + <kbd class="kbd docutils literal notranslate">R</kbd> (Mac)</p></li>
+</ul>
+<p>តាមលំនាំដើម Render បើក <strong>បង្អួចថ្មី</strong> («Render Window») — ពេលកំពុង Render អ្នកមិនអាចធ្វើអ្វីផ្សេងក្នុង Daz Studio បានទេ។ តាមដានវឌ្ឍនភាពក្នុង Render Window · ចុច <strong>'Cancel'</strong> (ជ្រុងខាងក្រោមស្ដាំ) ដើម្បីបញ្ឈប់ · ពេលចប់ ប៊ូតុង Cancel ប្រែទៅជា <strong>'Close'</strong>។</p>
+</section>
+<section id="render">
+<h2>រក្សាទុកលទ្ធផល Render<a class="headerlink" href="#render" title="Link to this heading"></a></h2>
+<p>Render ចប់ហើយនៅតែត្រូវរក្សាទុក! (បើមិនពេញចិត្ត ចុច 'Close' ដើម្បោះបោះចោលបាន)</p>
+<ol class="arabic simple">
+<li><p>ដាក់ឈ្មោះក្នុងប្រអប់ <strong>'Name'</strong></p></li>
+<li><p>ជ្រើសទម្រង់ឯកសារពីម៉ឺនុយធ្លាក់ចុះ៖ <code class="docutils literal notranslate"><span class="pre">.jpg</span></code>, <code class="docutils literal notranslate"><span class="pre">.png</span></code>, <code class="docutils literal notranslate"><span class="pre">.tiff</span></code> ឬ <code class="docutils literal notranslate"><span class="pre">.bmp</span></code> សម្រាប់រូបភាពនៅនឹងថ្កល់</p></li>
+<li><p>ជ្រើសទីតាំងរក្សាទុក៖</p>
+<ul class="simple">
+<li><p>លំនាំដើម = <strong>«Render Library»</strong> របស់ Daz Studio (មើលបានពីផ្ទាំង Render Library · ប្រើគ្រាប់ <strong>+</strong> ដើម្បីបង្កើតថតក្នុង library)</p></li>
+<li><p>ទីតាំងផ្សេង = ជ្រើស <strong>'Folder'</strong> ពីម៉ឺនុយធ្លាក់ចុះខាងឆ្វេង រួចចុចប៊ូតុង <strong>'…'</strong> ខាងស្ដាំដើម្បីរុករក</p></li>
+</ul>
+</li>
+<li><p>ចុច <strong>'Save'</strong> — Daz Studio រក្សាទុករូបភាព ២ វិមាត្រនៅទីតាំងដែលជ្រើស</p></li>
+</ol>
+<p>ឥឡូវអ្នកអាចចែករំលែករូបភាពជាមួយមិត្តភ័ក្ដិ គ្រួសារ ឬសហការី ឬបើកកែក្នុងកម្មវិធីកែរូបភាព ២ វិមាត្រដូចជា Adobe® Photoshop®។</p>
+</section>
+<section id="id1">
+<h2>សេចក្ដីបញ្ចប់<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<p>អបអរសាទរ! អ្នកបានបញ្ចប់ជំពូកចុងក្រោយនៃផ្នែកសំខាន់នៃមគ្គុទ្ទេសក៍។ កុំឈប់ Render — ចែករំលែកស្នាដៃក្នុង <a class="reference external" href="https://www.daz3d.com/forums">forums</a> និង galleries របស់ DAZ 3D ឬសាកល្បងចូលរួមការប្រកួត render (មានសម្រាប់គ្រប់កម្រិតជំនាញ)។ ការអនុវត្តបន្តនឹងធ្វើឱ្យជំនាញរបស់អ្នករីកចម្រើន។</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="lights.html" class="btn btn-neutral float-left" title="ជំពូក ៧ — ពន្លឺ" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../guide/layouts.html" class="btn btn-neutral float-right" title="មេរៀន៖ ការប្ដូរ Layout និង Interface Style" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright មាតិកាដើម © DAZ 3D, LP (CC BY 3.0) · ការបកប្រែខ្មែរ © សហគមន៍ (CC BY 4.0).
+      <span class="lastupdated">Last updated on 20 តុលា 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

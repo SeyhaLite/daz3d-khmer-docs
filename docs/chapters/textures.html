@@ -1,0 +1,333 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="km" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta content="ជំពូក ៣៖ វាយនភាព ផ្ទៃ និងសម្ភារៈ — Surface, Image Map, Shader, Diffuse/Specular/Glossiness, Bump, Displacement, UV Set និង Material Presets។ Chapter 3: textures, surfaces, materials and shaders." name="description" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ជំពូក ៣ — វាយនភាព ផ្ទៃ និងសម្ភារៈ &mdash; Daz Studio 4.x ឯកសារខ្មែរ</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/khmer.css?v=ca5001cf" />
+
+  
+    <link rel="shortcut icon" href="../_static/daz-logo.png"/>
+    <link rel="canonical" href="https://seyhalite.github.io/daz3d-khmer-docs/chapters/textures.html" />
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=c23564c2"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ជំពូក ៤ — Shaping (កែរូបរាង)" href="shaping.html" />
+    <link rel="prev" title="ជំពូក ២ — សាងសង់ឆាក" href="scene.html" />
+ 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@300;400;500;600;700&amp;family=Noto+Serif+Khmer:wght@500;600;700&amp;display=swap" rel="stylesheet"><link rel="apple-touch-icon" href="../_static/daz-logo.png">
+<link rel="canonical" href="https://seyhalite.github.io/daz3d-khmer-docs/chapters/textures.html">
+<meta name="keywords" content="Daz Studio, Daz Studio 4, Daz Studio Khmer, DAZ 3D documentation, Khmer 3D tutorial, ឯកសារ Daz Studio, បកប្រែជាភាសាខ្មែរ, មគ្គុទ្ទេសក៍ខ្មែរ, 3D rendering, Genesis figure, morph, posing, lighting, depth of field, ភាសាខ្មែរ">
+<meta property="og:site_name" content="Daz Studio 4.x — ឯកសារជាភាសាខ្មែរ">
+<meta property="og:title" content="ជំពូក ៣ — វាយនភាព ផ្ទៃ និងសម្ភារៈ">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="km_KH">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:image" content="https://seyhalite.github.io/daz3d-khmer-docs/_static/daz-logo.png">
+<meta property="og:url" content="https://seyhalite.github.io/daz3d-khmer-docs/chapters/textures.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ជំពូក ៣ — វាយនភាព ផ្ទៃ និងសម្ភារៈ">
+<meta name="twitter:image" content="https://seyhalite.github.io/daz3d-khmer-docs/_static/daz-logo.png">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "WebSite", "name": "Daz Studio 4.x — ឯកសារជាភាសាខ្មែរ", "alternateName": "Daz Studio 4.x Khmer Documentation", "url": "https://seyhalite.github.io/daz3d-khmer-docs/", "inLanguage": ["km", "en"], "description": "Khmer translation of the official Daz Studio 4.x documentation with official screenshots. ការបកប្រែជាភាសាខ្មែរនៃឯកសារផ្លូវការ Daz Studio 4.x។", "potentialAction": {"@type": "SearchAction", "target": "https://seyhalite.github.io/daz3d-khmer-docs/search.html?q={search_term_string}", "query-input": "required name=search_term_string"}}
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #1f2328" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Daz Studio 4.x
+              <img src="../_static/daz-logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">ការចាប់ផ្តើម</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">ចាប់ផ្តើមប្រើ Daz Studio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../userguide.html">មគ្គុទ្ទេសក៍អ្នកប្រើប្រាស់ (សង្ខេប)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">មគ្គុទ្ទេសក៍ចាប់ផ្តើមរហ័ស — Barefoot Dancer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ជំពូកមគ្គុទ្ទេសក៍អ្នកប្រើប្រាស់</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="navigating.html">ជំពូក ១ — ស្វែងយល់ពីចំណុចប្រទាក់</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scene.html">ជំពូក ២ — សាងសង់ឆាក</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">ជំពូក ៣ — វាយនភាព ផ្ទៃ និងសម្ភារៈ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">គោលគំនិតមូលដ្ឋាន</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#surfaces">ផ្ទាំង Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#material-s-presets">Material(s) Presets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#spot-render-tool">Spot Render Tool — ត្រួតពិនិត្យរហ័ស</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="shaping.html">ជំពូក ៤ — Shaping (កែរូបរាង)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="posing.html">ជំពូក ៥ — Posing (កែកាយវិការ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cameras.html">ជំពូក ៦ — កាមេរ៉ា និងទិដ្ឋភាព</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lights.html">ជំពូក ៧ — ពន្លឺ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rendering.html">ជំពូក ៨ — Rendering (ចេញជារូបភាព និងវីដេអូ)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">មេរៀនបន្ថែម</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide/layouts.html">មេរៀន៖ ការប្ដូរ Layout និង Interface Style</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ឯកសារយោង</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../reference/overview.html">មគ្គុទ្ទេសក៍យោង (សង្ខេប)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/interface.html">ចំណុចប្រទាក់អ្នកប្រើប្រាស់ (UI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/glossary.html">វចនានុក្រមពាក្យបច្ចេកទេស</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #1f2328" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Daz Studio 4.x</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">ជំពូក ៣ — វាយនភាព ផ្ទៃ និងសម្ភារៈ</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/SeyhaLite/daz3d-khmer-docs/edit/main/source/chapters/textures.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>ជំពូក ៣ — វាយនភាព ផ្ទៃ និងសម្ភារៈ<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
+<p class="src-note">បកប្រែពី៖ <a href="https://docs.daz3d.com/public/software/dazstudio/4/userguide/chapters/textures_surfaces_and_materials/start" target="_blank" rel="noopener">III — Textures, Surfaces and Materials</a> · <i>The Wonderful World of Color</i></p><p>ក្នុងកម្មវិធី 3D ភាគច្រើន ពេលគំរូត្រូវបានបង្កើត តាមលំនាំដើមវាមានពណ៌តែមួយ — ជាធម្មតាពណ៌ប្រផេះ។ ប្រៀបធៀបនឹងពិភពពិត៖ ចម្លាក់ដីឥដ្ឋមានពណ៌តាមដីឥដ្ឋ រហូតដល់សិល្បករលាបពណ៌ ឬលាបថ្នាំ។ ដូចគ្នានឹង 3D — ជំនួសការលាបពណ៌ផ្ទាល់លើគំរូ Daz Studio ប្រើ <strong>«Textures»</strong> ឬ <strong>«Image Maps»</strong> ដើម្បីផ្ដល់ពណ៌ដល់គំរូ។</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>គំរូភាគច្រើនដែលទិញពី DAZ 3D ផ្ទុកមកជាមួយ texture រួចហើយ — ប៉ុន្តែអ្នកនៅតែអាចបត់បែនផ្ទៃបាន។</p>
+</div>
+<p>លទ្ធភាពគ្មានទីបញ្ចប់៖ អ្នកអាចមុជជ្រៅក្នុង hyper-realism (ផ្ទៃដូចពិតបំផុត) ធ្វើឱ្យ render មានរូបរាងតុក្កតា (stylized/cartoon) ឬអ្វីមួយនៅចន្លោះនោះ។</p>
+<section id="id2">
+<h2>គោលគំនិតមូលដ្ឋាន<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<section id="surface">
+<h3>Surface (ផ្ទៃ)<a class="headerlink" href="#surface" title="Link to this heading"></a></h3>
+<p>«Surface» គឺជាផ្នែករងជាក់លាក់នៃគំរូ 3D — ក្រុម polygon ជាក់លាក់ដែលចែករំលែកលក្ខណៈសម្បត្តិរួមគ្នា សម្រាប់ពណ៌នាពីរូបរាងផ្ទៃរបស់គំរូ។ ពេលសិល្បករ model វត្ថុមួយ គាត់កំណត់ផ្នែកនីមួយៗនៃគំរូទៅ surface ដែលមានឈ្មោះ — ចប់ក្ដី polygon ទាំងអស់ស្ថិតក្រោម surface ណាមួយ។ គំរូសាមញ្ញអាចមាន surface តែមួយ ចំណែកគំរូស្មុគស្មាញមានច្រើន — ឧទាហរណ៍ តួ <strong>Genesis មាន ២៦ surfaces</strong>។</p>
+<p><strong>ឧទាហរណ៍៖</strong> ស្រមៃថាអ្នក model អាវធំមួយ — វាមានកូនប៊ូតុង ខ្សែរូត ប្រាក់ចង និងក្រណាត់។ អ្នក model ឆ្លាតវៃនឹងកំណត់កូនប៊ូតុងទៅ surface របស់វា ខ្សែរូតទៅ surface របស់វា... ដូច្នេះអ្នកប្រើអាចបត់បែនរូបរាងផ្នែកនីមួយៗដាច់ដោយឡែក — ឧ. ធ្វើឱ្យក្រណាត់មានរូបរាង matte ខណៈកូនប៊ូតុង និងប្រាក់ចងរលង។</p>
+</section>
+<section id="image-map">
+<h3>Image Map (ផែនទីរូបភាព)<a class="headerlink" href="#image-map" title="Link to this heading"></a></h3>
+<p>«Image Map» គឺជារូបភាព ២ វិមាត្រដែល «រុំ» (wrap) ជុំវិញ surface។ ការងារផ្ទៃភាគច្រើនធ្វើឡើងដោយ image maps — វាជាវិធីងាយស្រួលបំផុតដើម្បីទទួលបានលទ្ធផលដែលមិនដូចៗគ្នាពេញផ្ទៃ (ឧ. ស្បែកមានហ្វ្រាំង/ស្នាម)។ សរុបមក វាបន្ថែមព័ត៌មានលម្អិតដល់ផ្ទៃគំរូ។</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Image maps ជួនកាលហៅថា «Texture Maps» — ជាពិសេសពេលប្រើសម្រាប់លក្ខណៈសម្បត្តិ Diffuse Color។</p>
+</div>
+<p>របៀបដែល image map រុំជុំវិញគំរូ កំណត់ដោយ <strong>«UV Set»</strong> — សំណុំកូអរដោនេ ២ វិមាត្រដែលត្រូវនឹងចំណុច ៣ វិមាត្រលើគំរូ។ Genesis និង Genesis 2 មានសមត្ថភាព morph ខ្លាំង ដូច្នេះ Daz Studio អនុញ្ញាត <strong>UV sets ច្រើន</strong> សម្រាប់តួមួយ — អ្នកបង្កើត morph ខ្លាំងអាចភ្ជាប់ UV set បន្ថែមដែលគិតគូរពីការបំភ្លៃដែល morph បង្ក។ UV sets ច្រើនក៏បង្កើនភាពស្របគ្នានៃ texture រវាងតួផ្សេងៗដែរ។</p>
+</section>
+<section id="surface-shader">
+<h3>Surface Shader<a class="headerlink" href="#surface-shader" title="Link to this heading"></a></h3>
+<p>«Surface Shader» គឺជា <strong>កម្មវិធី</strong> ដែល «Render Engine» ដំណើរការសម្រាប់ចំណុចដែលមើលឃើញនីមួយៗលើផ្ទៃ ដើម្បីកំណត់ពណ៌ និង opacity ចុងក្រោយ — វាគណនាពីរបៀបដែលផ្ទៃប្រតិកម្មនឹងពន្លឺ ចំណាំងផ្លាត ឬចំណាំងបែរ ជាដើម។ ជាចុងក្រោយ វាកំណត់តម្លៃ RGB សម្រាប់ pixel ទាំងអស់ក្នុងឆាក។ អ្នកមិនអាច «ឃើញ» shader ក្នុងឆាកទេ — ឃើញតែលទ្ធផលរបស់វា។</p>
+<p>Daz Studio មាន shader ៥ ប្រភេទ៖ <strong>Surface, Light, Volume, Imager និង Displacement</strong> — ក្នុងនោះ custom surface shader ជាប្រភេទធម្មតាបំផុត។ សំណាងល្អ Daz Studio ភ្ជាប់មកជាមួយ shaders រួចរាល់ជាច្រើន ដូច្នេះអ្នកមិនចាំបាច់សរសេរខ្លួនឯងទេ។</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<ul class="simple">
+<li><p>Surface shader ដែលដាក់លើផ្ទៃ <strong>កំណត់លក្ខណៈសម្បត្តិដែលមាន</strong> សម្រាប់ផ្ទៃនោះក្នុងផ្ទាំង Surfaces</p></li>
+<li><p>ពាក្យ «Shader Preset» ≠ shader (ការហៅ Shader Preset ថា shader ជាការយល់ច្រឡំ)</p></li>
+<li><p>ការ Render ដោយ 3Delight នៃផ្ទៃដែលមាន custom shader អាចខុសពីការមើលជាមុនក្នុង Viewport យ៉ាងខ្លាំង</p></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="surfaces">
+<h2>ផ្ទាំង Surfaces<a class="headerlink" href="#surfaces" title="Link to this heading"></a></h2>
+<p>ផ្ទាំង Surfaces (ខាងឆ្វេងក្នុង layout Hollywood Blvd, Activity 'Actors, Wardrobe &amp; Props') មាន <strong>៣ pages</strong> នៅផ្នែកខាងលើ៖ <strong>Presets</strong>, <strong>Editor</strong> និង <strong>Shader Baker</strong>។</p>
+<section id="page-editor">
+<h3>Page Editor<a class="headerlink" href="#page-editor" title="Link to this heading"></a></h3>
+<p>រៀបចំស្រដៀងផ្ទាំង Parameters៖</p>
+<ul class="simple">
+<li><p><strong>ជួរឆ្វេង</strong> — ការជ្រើសឆាកបច្ចុប្បន្ន + វត្ថុពាក់ព័ន្ធ (សម្លៀកបំពាក់ សក់ props)។ ពង្រីកវត្ថុដើម្បីឃើញ surfaces របស់វា។</p></li>
+<li><p>ក្រោមតួមាន <strong>«Surface Selection Sets»</strong> — ក្រុមផ្ទៃកំណត់ជាមុន (ឧ. មុខ + ក្បាល + បបូរមាត់កែព្រមគ្នា) រុករកតាម 'Default Templates' ឬ 'Legacy Surfaces' · និង <strong>«Surfaces»</strong> — ផ្ទៃនីមួយៗសម្រាប់ជ្រើសកែដាច់ដោយឡែក</p></li>
+<li><p>ជ្រើសផ្ទៃច្រើន៖ សង្កត់ <kbd class="kbd docutils literal notranslate">Ctrl</kbd> (PC) / <kbd class="kbd docutils literal notranslate">Cmd</kbd> (Mac) + ចុចឆ្វេង</p></li>
+<li><p><strong>Filters</strong> — «All» បង្ហាញលក្ខណៈសម្បត្តិទាំងអស់ · «Currently Used» បង្ហាញតែអ្វីដែលកំពុងប្រើ</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ការជ្រើសត្រូវមាន geometry ទើបលេចក្នុង Surfaces pane — វត្ថុគ្មាន geometry ដូចជា Lights និង Cameras មិនលេចទេ។</p>
+</div>
+<ul class="simple">
+<li><p><strong>ជួរស្ដាំ</strong> — លក្ខណៈសម្បត្តិទាំងអស់របស់ផ្ទៃដែលជ្រើស។ Shader បច្ចុប្បន្នបង្ហាញនៅផ្នែកខាងលើផ្ទាំង — ធម្មតាបំផុតគឺ <strong>«DAZ Studio Default»</strong> ប៉ុន្តែអ្នកក៏នឹងឃើញ 'omUberSurface', 'AoA_SubSurface' និង custom shaders ផ្សេងៗ។</p></li>
+</ul>
+</section>
+<section id="shaders">
+<h3>លក្ខណៈសម្បត្តិសំខាន់ៗ (មានក្នុង shaders ភាគច្រើន)<a class="headerlink" href="#shaders" title="Link to this heading"></a></h3>
+<section id="diffuse-color-diffuse-strength">
+<h4>Diffuse Color និង Diffuse Strength<a class="headerlink" href="#diffuse-color-diffuse-strength" title="Link to this heading"></a></h4>
+<p>ក្នុងពិភពពិត ផ្ទៃវត្ថុស្រូបរលកពន្លឺខ្លះ និងចំណាំងផ្លាតរលកផ្សេងទៀត — ពណ៌ដែលយើងឃើញគឺរលកដែលត្រូវបានចំណាំងផ្លាត។ «Diffuse reflection» ជាការចំណាំងផ្លាតខ្ចាត់ខ្ចាយទៅគ្រប់ទិស — <strong>Diffuse Color</strong> គឺពណ៌ [matte] ដែលយើងមើលឃើញនៃផ្ទៃ។</p>
+<ul class="simple">
+<li><p>វិធីទី ១៖ កែតម្លៃ RGB — អូសលេខណាមួយ ឬចុចលើប្រអប់ពណ៌ដើម្បីបើកផ្ទាំងសន្ទនា «Select Color» (ប៉ះពាល់ផ្ទៃទាំងមូលស្មើៗគ្នា)</p></li>
+<li><p>វិធីទី ២៖ ផ្ទុក image map — ចុច <strong>«Image Menu Button»</strong> (រូបភាពតំណាងមានព្រួញចុះក្រោម នៅខាងឆ្វេងនៃលក្ខណៈសម្បត្តិ) → ម៉ឺនុយបង្ហាញ textures ដែលប្រើថ្មីៗ + <strong>Browse…</strong> សម្រាប់រុករកថាស។ Image map ផ្ដល់រូបរាងពិតជាង ព្រោះផ្ទៃមិនមានពណ៌តែមួយទេ។</p></li>
+</ul>
+<p><strong>Diffuse Strength</strong> = ភាគរយពន្លឺដែលផ្ទៃចំណាំងផ្លាត៖ <code class="docutils literal notranslate"><span class="pre">0%</span></code> = ស្រូបពន្លឺទាំងអស់ (ផ្ទៃខ្មៅ) · <code class="docutils literal notranslate"><span class="pre">100%</span></code> = ពណ៌មានកម្លាំងពេញ។ អាចប្រើ <strong>grayscale image map</strong> បានដែរ — ពណ៌ស = 100%, ខ្មៅ = 0%, ប្រផេះ = កណ្ដាល (ងងឹតជាង = តិចជាង) ដើម្បីប្រែប្រួលតម្លៃពេញផ្ទៃ។ ពេលមាន image map តម្លៃ slider ដើរតួជា <strong>គុណ</strong> (multiplier)។</p>
+</section>
+<section id="specular-color-specular-strength-glossiness">
+<h4>Specular Color, Specular Strength និង Glossiness<a class="headerlink" href="#specular-color-specular-strength-glossiness" title="Link to this heading"></a></h4>
+<p>ពេលកាំពន្លឺបុកផ្ទៃ ហើយចំណាំងផ្លាតទៅ <strong>ទិសតែមួយ</strong> នោះហៅថា specular reflection។</p>
+<ul class="simple">
+<li><p><strong>Specular Color</strong> = ពណ៌នៃ highlight ដែលបង្កដោយការចំណាំងផ្លាតផ្ទាល់នេះ (មិនមែនសម្រាប់បង្កើតកញ្ចក់ទេ!)។ កែដូច Diffuse Color — RGB ឬ image map។</p></li>
+<li><p><strong>Specular Strength</strong> = ភាគរយនៃការចំណាំងផ្លាត specular៖ <code class="docutils literal notranslate"><span class="pre">0%</span></code> = គ្មាន highlight · <code class="docutils literal notranslate"><span class="pre">100%</span></code> = កម្លាំងពេញ។ កែដូច Diffuse Strength (slider ឬ grayscale map — slider ជា multiplier)។</p></li>
+<li><p><strong>Glossiness</strong> = <strong>ទំហំ</strong> នៃ specular highlight៖ ផ្ទៃកាន់តែរលង → highlight កាន់តែតូច និងមុត · glossiness ទាប → highlight ខ្ចាត់ខ្ចាយលើផ្ទៃធំជាង (ហើយមើលទៅ «ខ្សោយ» ជាង ទោះ Specular Strength នៅដដែល)។ ក៏ប្រើ grayscale map បានដែរ។</p></li>
+</ul>
+</section>
+<section id="ambient-color-ambient-strength">
+<h4>Ambient Color និង Ambient Strength<a class="headerlink" href="#ambient-color-ambient-strength" title="Link to this heading"></a></h4>
+<p>«Ambient light» = ឥទ្ធិពលស្មើៗគ្នាដែលពន្លឺលោតត្រឡប់ (bounced light) មានលើឆាក — ផ្ទុយពីពន្លឺផ្ទាល់ពីប្រភពជាក់លាក់។ ជំនួសឱ្យពន្លឺតែមួយគ្រប់គ្រងផ្ទៃទាំងអស់ Daz Studio ផ្ដល់ការគ្រប់គ្រងដាច់ដោយឡែក <strong>សម្រាប់ផ្ទៃនីមួយៗ</strong>។ Ambient light ប៉ះពាល់ពណ៌ និងតម្លៃនៃ «core shadows» លើផ្ទៃ។</p>
+<ul class="simple">
+<li><p><strong>Ambient Color</strong> — លំនាំដើម RGB <code class="docutils literal notranslate"><span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">0</span></code> (ខ្មៅ) ដូចពិភពពិត។ ប៉ុន្តែការប្ដូរវាបង្កើត effect គួរឱ្យចាប់អារម្មណ៍ — ដែលពេញនិយមបំផុតគឺធ្វើឱ្យផ្ទៃ «ភ្លឺ» (glow) ក្នុងតំបន់ពន្លឺខ្សោយ។ ផ្ទៃមិនបញ្ចេញពន្លឺពិតទេ ប៉ុន្តែបើ Ambient Color ស្រាលជាងឆាកជុំវិញ វា <em>មើលទៅ</em> ដូចជាភ្លឺ។</p></li>
+<li><p><strong>Ambient Strength</strong> — បរិមាណ ambient light ដែលផ្ទៃទទួល។ ឥទ្ធិពលនេះ <strong>មិន</strong> រាលដាលទៅផ្នែកផ្សេងនៃឆាកទេ — ប៉ះពាល់តែផ្ទៃដែលជ្រើស។</p></li>
+</ul>
+</section>
+<section id="opacity">
+<h4>Opacity (ភាពថ្លា)<a class="headerlink" href="#opacity" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">100%</span></code> = opaque (មិនថ្លាសោះ) · <code class="docutils literal notranslate"><span class="pre">0%</span></code> = ថ្លាទាំងស្រុង · កណ្ដាល = translucent</p></li>
+<li><p><strong>Opacity Map</strong> = grayscale image map ដែលខ្មៅ = ថ្លា 100% · ស = opaque 100% — អនុញ្ញាតឱ្យ «កាត់» ផ្នែកខ្លះនៃផ្ទៃចេញ (ឧ. ធ្វើរន្ធ ឬលំនាំក្រណាត់)</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Opacity maps ជារឿយៗហៅថា «transparency maps» — តាមពិតពាក្យនេះខុសបច្ចេកទេស (transparency map ពិតប្រាកដគឺច្រាសនៃ opacity map) ប៉ុន្តែគេប្រើជំនួសគ្នា។</p>
+</div>
+</section>
+<section id="bump">
+<h4>Bump (ក្លែងភាពគ្រើម)<a class="headerlink" href="#bump" title="Link to this heading"></a></h4>
+<p>ផ្ទៃក្នុងពិភពពិតកម្រល្អឥតខ្ចោះណាស់ — ស្បែកមានរន្ធ ជញ្ជាំងមានវាយនភាព។ <strong>Bump</strong> ក្លែងភាពមិនល្អឥតខ្ចោះទាំងនោះ <strong>ដោយមិនប្ដូរ mesh</strong> របស់វត្ថុ។</p>
+<ul class="simple">
+<li><p><strong>Bump Map</strong> = grayscale image៖ RGB <code class="docutils literal notranslate"><span class="pre">128,</span> <span class="pre">128,</span> <span class="pre">128</span></code> = អព្យាក្រឹត · ស្រាលជាង = bump វិជ្ជមាន (លៀនចេញ) · ងងឹតជាង = bump អវិជ្ជមាន (លិចចូល)</p></li>
+<li><p>ផ្ទុក map តាម Image Menu Button នៃ <strong>Bump Strength</strong> — slider ជា multiplier</p></li>
+<li><p>Shaders ភាគច្រើនមាន <strong>Bump Minimum</strong> និង <strong>Bump Maximum</strong> សម្រាប់កំណត់ដែនកំណត់/shift/scale តម្លៃ map</p></li>
+<li><p>⚠️ Bump មិនឃើញក្នុង Viewport ទេ — ឃើញតែ <strong>ក្រោយពេល Render</strong></p></li>
+</ul>
+</section>
+<section id="displacement">
+<h4>Displacement (ប្ដូររូបរាងពិត)<a class="headerlink" href="#displacement" title="Link to this heading"></a></h4>
+<p>ស្រដៀង bump ដែរ ប៉ុន្តែខុសគ្នាសំខាន់៖ bump គ្រាន់តែ <strong>ក្លែង</strong> ចំណែក displacement <strong>ប្ដូររូបរាង mesh ពិតប្រាកដ</strong> ពេល Render។ ឧទាហរណ៍ជញ្ជាំងឥដ្ឋ៖ bump សម្រាប់ភាពគ្រើមលើផ្ទៃឥដ្ឋនីមួយៗ · displacement សម្រាប់គម្លាតរវាងឥដ្ឋ (បាយអ)។</p>
+<ul class="simple">
+<li><p><strong>Displacement Map</strong> = grayscale image៖ <code class="docutils literal notranslate"><span class="pre">128,</span> <span class="pre">128,</span> <span class="pre">128</span></code> = គ្មាន displacement · ស្រាលជាង = mesh លៀនចេញក្រៅ · ងងឹតជាង = mesh លៀនចូលក្នុង</p></li>
+<li><p>Shaders ខ្លះមាន <strong>Minimum/Maximum Displacement</strong> ដើម្បីកំណត់ចម្ងាយ displacement អតិបរមា (Minimum = អវិជ្ជមាន, Maximum = វិជ្ជមាន)</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ខ្នាតក្នុង Daz Studio៖ <strong>1 unit = 1 សង់ទីម៉ែត្រ</strong> — ចាំទុកពេលកំណត់តម្លៃ min/max displacement។ ហើយដូច bump — ឥទ្ធិពលឃើញតែក្រោយ Render។</p>
+</div>
+</section>
+<section id="uv-set">
+<h4>UV Set<a class="headerlink" href="#uv-set" title="Link to this heading"></a></h4>
+<p>លក្ខណៈសម្បត្តិ <strong>UV Set</strong> លើផ្ទៃកំណត់ថា UV set ណាត្រូវបានប្រើ។ សំខាន់ណាស់៖ <strong>UV set និង image maps ត្រូវតែត្រូវគ្នា</strong> — បើមិនដូច្នោះអ្នកនឹងទទួលបានការបំភ្លៃ និង seams។ UV set ល្អបង្រួមការយឺត (stretching) និងការបង្រួម (compression) ហើយដាក់ seams នៅកន្លែងដែលសមហេតុផល ឬលាក់។</p>
+<p>ប្ដូរ UV set សម្រាប់ផ្ទៃមួយ ច្រើន ឬតួទាំងមូល៖ ក្នុងផ្ទាំង Surfaces ចុចលើបញ្ជីជ្រើស UV Set រួចជ្រើសពីបញ្ជីដែលមាន។</p>
+</section>
+</section>
+</section>
+<section id="material-s-presets">
+<h2>Material(s) Presets<a class="headerlink" href="#material-s-presets" title="Link to this heading"></a></h2>
+<p>ការកំណត់ផ្ទៃនីមួយៗដោយដៃ (ផ្ទុក image maps កំណត់តម្លៃ...) អាចនឿយហត់។ ផលិតផលភាគច្រើនពី DAZ 3D Store ភ្ជាប់មកជាមួយ presets ដែលកំណត់តម្លៃ និងផ្ទុក image maps ជំនួសអ្នក — រួមគ្នាហៅថា <strong>«Material»</strong> ហើយ presets នោះហៅថា <strong>«Material(s) Presets»</strong>។ នេះជាវិធីងាយស្រួលបំផុតក្នុងការកំណត់ផ្ទៃគំរូ។</p>
+<section id="presets">
+<h3>ការផ្ទុក Presets<a class="headerlink" href="#presets" title="Link to this heading"></a></h3>
+<p>ផ្ទុកបានពី ៣ កន្លែង៖ page <strong>Presets</strong> នៃផ្ទាំង Surfaces · ផ្ទាំង <strong>Smart Content</strong> · ផ្ទាំង <strong>Content Library</strong>។</p>
+<p>Page Presets របៀបដំណើរការដូច Smart Content ដែរ — Category View នៅខាងឆ្វេង (ពង្រីក/បង្រួមបាន) · Asset View នៅខាងស្ដាំ។</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>ត្រូវ <strong>ជ្រើសតួ/វត្ថុជាមុន</strong> ទើប presets លេចឡើង (ព្រោះវាត្រូវអនុវត្តលើវត្ថុក្នុងឆាក)។</p>
+</div>
+<p>ឧទាហរណ៍ជាមួយ Genesis 2 Female — តាមលំនាំដើមមានជម្រើសភ្នែក និងគ្រឿងសម្អាង (makeup) ជាច្រើន រួមទាំង texture ពេញខ្លួនឈ្មោះ <strong>'Bree All'</strong> (ការប្រើ 'Bree All' ស្ដារ materials ទៅសភាពដើម)។</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>អ្នកសិល្បៈជាច្រើនចាត់ទុក Material(s) Presets ជា <strong>ចំណុចចាប់ផ្តើម</strong> ប៉ុណ្ណោះ — បន្ទាប់ពីផ្ទុក preset កែលក្ខណៈសម្បត្តិលើ page Editor ដើម្បីរៀនពីឥទ្ធិពលរបស់វា។ វិធីរៀនល្អបំផុតមួយគឺ «វះកាត់» presets ដែលទិញពី DAZ 3D Store។</p>
+</div>
+</section>
+<section id="surface-selection-tool">
+<h3>Surface Selection Tool<a class="headerlink" href="#surface-selection-tool" title="Link to this heading"></a></h3>
+<p>ក្រៅពីជ្រើសក្នុងផ្ទាំង អាចជ្រើសផ្ទៃ <strong>ផ្ទាល់ក្នុង Viewport</strong>៖</p>
+<ol class="arabic simple">
+<li><p>បើកឧបករណ៍ពី toolbar (ចុចឆ្វេងលើរូបភាពតំណាង)</p></li>
+<li><p>ដាក់ទ្រនិចលើតួ — ផ្ទៃក្រោមទ្រនិចនឹងលេចពណ៌ ហើយ <strong>ឈ្មោះរបស់វាលេចក្បែរទ្រនិច</strong></p></li>
+<li><p>ចុចឆ្វេង → ផ្ទៃនោះត្រូវបានជ្រើសក្នុងផ្ទាំង Surfaces (សង្កត់ Ctrl/Cmd សម្រាប់ជ្រើសច្រើន)</p></li>
+</ol>
+<p>អត្ថប្រយោជន៍៖ ឃើញច្បាស់ថាតំបន់ណានៃគំរូជាផ្នែកនៃ surface នីមួយៗ និងជ្រើសបានទោះមិនដឹងឈ្មោះផ្ទៃ។</p>
+</section>
+<section id="material-s-preset">
+<h3>រក្សាទុក Material(s) Preset ផ្ទាល់ខ្លួន<a class="headerlink" href="#material-s-preset" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>ជ្រើសវត្ថុដែលចង់រក្សាទុក preset (ក្នុងផ្ទាំង Scene)</p></li>
+<li><p><strong>File &gt; Save As &gt; Material(s) Preset…</strong> → ផ្ទាំងសន្ទនា «Filtered Save» — ជ្រើសទីតាំង ដាក់ឈ្មោះ រួចចុច <strong>Save</strong></p></li>
+<li><p>ផ្ទាំងសន្ទនា <strong>«Material(s) Preset Save Options»</strong> លេចឡើង — ជ្រើសផ្ទៃដែលចង់រួម (ធីក/ដកធីក) និងលក្ខណៈសម្បត្តិក្រោមផ្ទៃនីមួយៗ (ចុចព្រួញដើម្បីពង្រីក)។ ឧទាហរណ៍៖ preset សម្រាប់តែភ្នែក → រួមតែផ្ទៃភ្នែក។</p></li>
+<li><p>ចុច <strong>Accept</strong></p></li>
+</ol>
+<p>Preset ថ្មីលេចក្នុង page Presets (Surfaces pane), Smart Content ឬ Content Library — ក្រោម category <strong>'Unassigned'</strong> (ពេលជ្រើសវត្ថុដើម)។ ចុចពីរដង ឬអូសទម្លាក់ដើម្បីផ្ទុក។</p>
+</section>
+</section>
+<section id="spot-render-tool">
+<h2>Spot Render Tool — ត្រួតពិនិត្យរហ័ស<a class="headerlink" href="#spot-render-tool" title="Link to this heading"></a></h2>
+<p>ការមើលជាមុនក្នុង Viewport ជាញឹកញាប់មិនគ្រប់គ្រាន់ដើម្បីឃើញថា materials នឹងលេចយ៉ាងណាពេល Render — លក្ខណៈសម្បត្តិផ្ទៃជាច្រើនមានឥទ្ធិពលតែ <strong>ក្រោយ Render</strong> ប៉ុណ្ណោះ ហើយការ Render ឆាកទាំងមូលចំណាយធនធាន និងពេលវេលាច្រើន។</p>
+<p><strong>Spot Render Tool</strong> ដំណោះស្រាយ៖ ចុចរូបភាពតំណាងរបស់វាក្នុង toolbar រួច <strong>ចុចឆ្វេង + អូស</strong> ក្នុង Viewport — ចតុកោណ marquee នឹងលេចឡើង ហើយ Daz Studio នឹង Render <strong>តែផ្នែកក្នុង marquee</strong> ដោយប្រើការកំណត់ Render បច្ចុប្បន្ន — លទ្ធផលលេចផ្ទាល់ក្នុង Viewport។</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>ការបង្កើត materials ដែលមើលទៅពិតត្រូវការការអនុវត្ត និងបទពិសោធន៍ — វិធីល្អបំផុតគឺសាកល្បង និងពិសោធន៍។ ជំពូកបន្ទាប់ (<a class="reference internal" href="shaping.html"><span class="doc">Shaping</span></a>) សប្បាយជាង និងតិចបច្ចេកទេសជាង!</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="scene.html" class="btn btn-neutral float-left" title="ជំពូក ២ — សាងសង់ឆាក" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="shaping.html" class="btn btn-neutral float-right" title="ជំពូក ៤ — Shaping (កែរូបរាង)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright មាតិកាដើម © DAZ 3D, LP (CC BY 3.0) · ការបកប្រែខ្មែរ © សហគមន៍ (CC BY 4.0).
+      <span class="lastupdated">Last updated on 20 តុលា 2026.
+      </span></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
